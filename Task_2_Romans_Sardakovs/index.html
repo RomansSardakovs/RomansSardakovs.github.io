@@ -8,127 +8,169 @@
 </head>
 <body>
     <main>
+
         <header>
-            <img src="assets/img/Union.svg" alt="">
-            <img src="assets/img/BlackLogo 3.jpg" alt="">
-            <ul class="primary-navbar | text-montserrat-400">
-                <li><a href="">Ideja</a></li>
-                <li><a href="">Piesaki Sapni</a></li>
-                <li><a href="">Uzņēmējiem</a></li>
-                <li><a href="">Sapņu banka</a></li>
-                <li><a href="">Sapņus atbalsta</a></li>
-                <li><a href="">99 Iedvesmas stāsti</a></li>
-                <li><a href="">LV</a></li>
-            </ul>
+            <div class="container">
+                <img class="top-union | position-absolute" src="assets/img/Union.svg" alt="">
+
+                <div class="header-top | position-relative display-flex">
+                    <img class="header-logo" src="assets/img/BlackLogo 3.jpg" alt="">
+                    <ul  class="primary-navbar | display-flex text-montserrat-500 text-500">
+                        <li class="padding-r-36"><a href="">Ideja</a></li>
+                        <li class="padding-r-36"><a href="">Piesaki Sapni</a></li>
+                        <li class="padding-r-39"><a href="">Uzņēmējiem</a></li>
+                        <li class="padding-r-36"><a href="">Sapņu banka</a></li>
+                        <li class="padding-r-35"><a href="">Sapņus atbalsta</a></li>
+                        <li class="padding-r-63"><a href="">99 Iedvesmas stāsti</a></li>
+                        <li><a href="">LV</a></li>
+                    </ul>
+                </div>
+
+            </div>
        </header>
     
-       <section class="video">
+       <section class="video-sect">
             <div class="container">
-                <div class="video-img">
-                    <img src="assets/img/Sparkle_Video_1.png" alt="">
-                    <img src="assets/img/Group 2.svg" alt="">
+                <div class="video-img-group | position-relative">
+                    <div class="video-img">
+                        <img src="assets/img/Sparkle_Video_1.png" alt="">
+                    </div>
+                    <div class="play-icon | position-absolute">
+                        <img src="assets/img/Group 2.svg" alt="">
+                    </div>
                 </div>
-                <div class="text">
-                    <p class="clr-primary text-montserrat-400">SparkleHeart ir biedrība, kas radīta, lai palīdzētu cilvēkiem piepildīt pat pārdrošākos sapņus. Šeit satiekas sapņotāji un viņu atbalstītāji - uzņēmumi, kas sniedz palīdzīgu roku, lai kopā pasauli padarītu par labāku vietu mums visiem.Mēs esam gatavi palīdzēt Tev piepildīt sapni. Kā pamats iedvesmai - tiek radīti arī 99 stāsti par Latvijas sievietēm.</p>
+                <div class="video-text">
+                    <p class="clr-primary text-montserrat-400 text-400">
+                        SparkleHeart ir biedrība, kas radīta, lai palīdzētu cilvēkiem piepildīt pat pārdrošākos sapņus. Šeit satiekas sapņotāji un viņu atbalstītāji -<br>
+                        uzņēmumi, kas sniedz palīdzīgu roku, lai kopā pasauli padarītu par<br>
+                        labāku vietu mums visiem.Mēs esam gatavi palīdzēt Tev piepildīt sapni.<br>
+                        Kā pamats iedvesmai - tiek radīti arī 99 stāsti par Latvijas sievietēm.</p>
                 </div>
             </div>
-            <img src="assets/img/Union.pdf" alt="">
        </section>
     
-       <section class="images">
-        <div class="container">
-            <img src="assets/img/ripped 6 7.svg" alt="">
-            <img src="assets/img/Zanda_1.jpg" alt="">
-            <img src="assets/img/Sibilla_4.jpg" alt="">
-            <img src="assets/img/Brinuma_meita-15.jpg" alt="">
-            <img src="assets/img/Alina_1 1.jpg" alt="">
-            <img src="assets/img/Anda_2 1.jpg" alt="">
-            <img src="assets/img/ripped 6 8.svg" alt="">
+       <section class="images-sect">
+        <div class="container | position-relative">
+            <img class="images-cover" id="top-cover" src="assets/img/ripped 6 7.svg" alt="">
+                <div class="images | position-relative display-flex">
+                    <img class="zanda-1" src="assets/img/Zanda_1.jpg" alt="">
+                    <img class="sibilia-4" src="assets/img/Sibilla_4.jpg" alt="">
+                    <div>
+                        <img src="assets/img/Brinuma_meita-15.jpg" alt="">
+                        <img src="assets/img/Alina_1 1.jpg" alt="">
+                    </div>
+                    <img class="anda2-1" src="assets/img/Anda_2 1.jpg" alt="">
+                </div>
+            <img class="images-cover" id="bottom-cover" src="assets/img/ripped 6 8.svg" alt="">
         </div>
        </section>
     
-       <section class="sect-buttons">
-        <div class="container">
-            <h3 class="text-oswald clr-primary">VĒLIES PIEPILDĪT SAVU SAPNI?</h3>
-            <button>Sapņotājiem</button>
-            <h3 class="text-oswald clr-primary">VĒLIES PALĪDZĒT KĀDĀM PIEPILDĪT SAPNI?</h3>
-            <button>Uzņēmējiem</button>
-    
-        </div>
-       </section>
-    
-       <section class="form">
-        <div class="container">
-            <h2 class="text-oswald clr-primary">SAZINĀTIES AR MUMS</h2>
-            <form>
-                <label for="name_surname"></label>
-                <input type="text" id="name_surname" name="name_surname">
-                <label for="email"></label>
-                <input type="text" id="email" name="email">
-                <label for="phone"></label><br>
-                <input type="text" id="phone" name="phone">
-                <label for="comment"></label><br>
-                <input type="text" id="comment" name="comment">
-            </form>
-            <div class="text-Montserrat-400">
-                <p>* obligāti aizpildāmie lauki</p>
-                <form >
-                    <input type="checkbox" id="terms" name="terms">
-                    <label for="terms">Piekrītu, ka mani dati tiks izmantoti likumdošanā noteiktā kārtībā un tiks saglabāti līdz brīdim, kamēr tas būs nepieciešams.</label>
-                </form>
+       <section class="buttons-sect">
+        <div class="container | display-flex">
+            <div class="left-btn-group">
+                <h3 class="left-btn-title | text-oswald text-500 clr-primary">VĒLIES PIEPILDĪT SAVU SAPNI?</h3>
+                <button class="left-btn | button bg-primary text-montserrat-500 text-500">Sapņotājiem</button>
             </div>
-            <button>Sūtīt</button>
+            <div class="right-btn-group">
+                <h3 class="right-btn-title | text-oswald text-500 clr-primary">VĒLIES PALĪDZĒT KĀDĀM PIEPILDĪT SAPNI?</h3>
+                <button class="right-btn | button bg-primary text-montserrat-500 text-500">Uzņēmējiem</button>
+            </div>
         </div>
        </section>
     
-       <section class="logos">
+       <section class="form-sect">
         <div class="container">
-            <img src="assets/img/Subtract.svg" alt="">
-            <h4 class="text-oswald clr-primary">ATBALSTĪTĀJI</h4>
-            <img src="assets/img/getlogo 1.png" alt="">
-            <img src="assets/img/sem_logo-2 1.png" alt="">
-            <img src="assets/img/Citybee-logo 1.png" alt="">
-            <img src="assets/img/logo1 1.png" alt="">
+            <h2 class="form-title | clr-primary text-oswald text-500">SAZINĀTIES AR MUMS</h2>
+                <div class="form-container | text-montserrat-400 text-400">
+                    <form>
+                        <input type="text" id="name-surname" placeholder="Vārds, Uzvārds*">
+                        <input type="email" id="email" placeholder="E-pasts*"><br>
+                        <input type="tel" id="phone" placeholder="Telefons*">
+                        <textarea cols="30" rows="10" id="comment" placeholder="Jautājums, vai komentārs*"></textarea>
+                    </form>
+                    <p class="mandatory | clr-primary text-montserrat-400 text-400">* obligāti aizpildāmie lauki</p>
+                    <form>
+                        <div class="display-flex">
+                            <div>
+                                <div>
+                                    <input id="check-box" type="checkbox">
+                                </div>
+                            </div>
+                            <div class="terms-container">
+                                <label class="clr-primary text-montserrat-400 text-400" id="terms" for="check-box">Piekrītu, ka mani dati tiks izmantoti likumdošanā noteiktā kārtībā un tiks saglabāti līdz brīdim, kamēr tas būs nepieciešams.</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            <button class="submit-btn | button bg-primary text-montserrat-500 text-500">Sūtīt</button>
+        </div>
+       </section>
+    
+       <section class="logos-sect">
+        <div class="container | position-relative">
+            <div class="logos-title | position-absolute">
+                <h4 class="clr-primary text-oswald text-500">ATBALSTĪTĀJI</h4>
+            </div>
+            <div class="container-logos | display-flex">
+                <img class="logo-bg" src="assets/img/Subtract.svg" alt="">
+                <div class="logos | position-absolute">
+                    <img src="assets/img/getlogo 1.png" alt="">
+                    <img src="assets/img/sem_logo-2 1.png" alt="">
+                    <img src="assets/img/Citybee-logo 1.png" alt="">
+                    <img src="assets/img/logo1 1.png" alt="">
+                </div>
+            </div>
         </div>
        </section>
     
        <footer>
-        <div class="container">
-            <img src="assets/img/Unionfooter.svg" alt="">
-            <div class="logo | text-Montserrat-500">
+        <div class="container | position-relative text-montserrat-500 text-500">
+            <div class="footer-bg">
+                <img src="assets/img/Unionfooter.svg" alt="">
+            </div>
+
+            <div class="logo | position-absolute text-Montserrat-500">
                 <img src="assets/img/GoldenV2Logo 3.png" alt="">
                 <p>© SparkleHeart 2020.<br>Visas tiesības aizsargātas.</p>
             </div>
-            <div class="navbar | text-Montserrat-500">
+
+            <div class="navbar | position-absolute text-Montserrat-500">
                 <ul>
-                    <li><a href="">Ideja</a></li>
-                    <li><a href="">Piesaki Sapni</a></li>
-                    <li><a href="">Uzņēmējiem</a></li>
-                    <li><a href="">Sapņu banka</a></li>
-                    <li><a href="">Sapņus atbalsta</a></li>
+                    <div class="navbar-first-child">
+                        <li class="padding-b-23"><a href="">Ideja</a></li>
+                    </div>
+                    <li class="padding-b-23"><a href="">Piesaki Sapni</a></li>
+                    <li class="padding-b-19"><a href="">Uzņēmējiem</a></li>
+                    <li class="padding-b-23"><a href="">Sapņu banka</a></li>
+                    <li class="padding-b-21"><a href="">Sapņus atbalsta</a></li>
                     <li><a href="">Iedvesmas stāsti</a></li>
                 </ul>
             </div>
-            <div class="requsites | text-Montserrat-500">
-                <p>Biedrība SparkleHeart</p>
-                <p>Reģistrācijas nr. 40008293119</p>
-                <p>Banka: SWEDBANK A/S</p>
+
+            <div class="requsites | position-absolute text-Montserrat-500">
+                <p class="requsites-title | padding-b-17">Biedrība SparkleHeart</p>
+                <p class="padding-b-12">Reģistrācijas nr. 40008293119</p>
+                <p class="padding-b-9">Banka: SWEDBANK A/S</p>
                 <p>LV52HABA0551047652465</p>
             </div>
-            <div class="info | text-Montserrat-500">
-                <p>Juris Gogulis</p>
-                <p>juris.gogulis@sparkleheart.org</p>
-                <p>+37126890034</p>
+
+            <div class="info | position-absolute text-Montserrat-500">
+                <p class="info-name | padding-b-15">Juris Gogulis</p>
+                <p class="padding-b-12">juris.gogulis@sparkleheart.org</p>
+                <p class="padding-b-11">+37126890034</p>
                 <p>Biķernieku iela 24a - 5, LV-1006</p>
             </div>
-            <div class="icons | text-Montserrat-500">
-                <img src="assets/img/facebook.svg" alt="">
-                <img src="assets/img/instagram.svg" alt="">
+
+            <div class="icons | position-absolute text-Montserrat-500">
+                <div class="icons-group | display-flex">
+                    <img class="facebook" src="assets/img/facebook.svg" alt="">
+                    <img class="instagram" src="assets/img/instagram.svg" alt="">
+                </div>
                 <p>Privātuma politika</p>
             </div>
         </div>
-       </footer>
 
+       </footer>
     </main>
 </body>
 </html>
