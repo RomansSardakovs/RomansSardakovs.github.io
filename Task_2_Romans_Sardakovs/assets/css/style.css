@@ -67,12 +67,12 @@ body {
 
 /* Set core body defaults */
 body {
-max-width: 1366px;  
-margin: 0 auto;   
-text-rendering: optimizeSpeed;
-line-height: 1.5;
+  max-width: 1366px;  
+  margin: 0 auto;   
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
 }
-
+  
 main{
   width: 1366px;
 }
@@ -163,7 +163,10 @@ line-height: normal;
 /* CSS */
 
 .top-union {
-max-width: 1366px;
+width: 1366px;
+height: 120px;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+background: url("../img/desktop/Union.svg");
 z-index: -1;
 }
 
@@ -174,10 +177,11 @@ top: 0;
 }
 
 .header-logo{
-  max-width: 159px;
-  max-height: 146px;
+  width: 159px;
+  height: 96px;
   margin-left: 3.9rem;
   margin-right: 5.25rem;
+  background: url("../img/desktop/BlackLogo3.jpg"), lightgray 50% / cover no-repeat;
 }
 
 .primary-navbar{
@@ -457,7 +461,6 @@ margin-left: 3rem;
 width: 18px;
 height: 36px;
 margin-right: 1.8rem;
-
 }
 
 .instagram{
@@ -467,5 +470,74 @@ height: 36px;
 
 @media (max-width: 320px) {
 
+  main{
+    width: 320px;
+    height: 2971px;
+    margin: 0 auto; 
+  }
+
+  header .container{
+    max-width: 320px;
+  }
+
+  .top-union{
+    max-width: 320px;
+    height: 59px;
+    background: url("../img/mobile/Union.svg")
+  }
+
+  .header-logo{
+    max-width: 78px;
+    max-height: 49px;
+    margin-left: 1.2rem;
+    z-index: 1;
+    background: url("../img/mobile/BlackLogo3.png")
+  }
+
+  .primary-navbar{
+    display: none;
+  }
+
+  .text{
+    max-width: 280px;
+    max-height: 124px;
+    
+  }
+
  
+
+  .video-img{
+    z-index: -1;
+  }
+
+  .play-icon{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .video-img-group{
+    display: none;
+  }
+
+  .images-sect{
+    display: none;
+  }
+
+  .buttons-sect{
+    display: none;
+  }
+
+  .form-sect{
+    display: none;
+  }
+
+  .logos-sect{
+    display: none;
+  }
+
+  footer{
+    display: none;
+  }
+
 }
