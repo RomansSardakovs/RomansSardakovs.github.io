@@ -1,0 +1,890 @@
+:root{
+
+  --clr-primary: #2F4858;
+
+  --bg-primary: #FFA800;
+  --bg-footer-top: #FFCB66;
+  --bg-footer-bottom: #2F4858;
+  --bg-form: rgba(196, 196, 196, 0.40);
+
+  --ff-montserrat-400: Montserrat-400;
+  --ff-montserrat-500: Montserrat-500;
+  --ff-oswald: Oswald;
+
+  --fw-400: 400;
+  --fw-500: 500;
+
+}
+
+@font-face {
+  font-family: Oswald;
+  src: url('../font/Oswald/Oswald-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Montserrat-500;
+  src: url('../font/Montserrat/Montserrat-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Montserrat-400;
+  src: url('../font/Montserrat/Montserrat-Regular.ttf') format('truetype');
+}
+
+/* https://piccalil.li/blog/a-modern-css-reset
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: black;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/*Fix some height related issues*/
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  width: 320px;  
+  height: 2970px;
+  margin: 0 auto;   
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+html:focus-within {
+ scroll-behavior: auto;
+}
+
+*,
+*::before,
+*::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+}
+
+main{
+  overflow: hidden;
+}
+
+a {
+  text-decoration-skip-ink: auto;
+  text-decoration: none;
+}
+
+li,
+ol,
+ul {
+  list-style-type: none;    
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Utility Classes*/
+
+.padding-r-35{padding-right: 35px;}
+.padding-r-36{padding-right: 36px;}
+.padding-r-39{padding-right: 39px;}
+.padding-r-63{padding-right: 63px;}
+
+.padding-b-9{padding-bottom: 9px;}
+.padding-b-12{padding-bottom: 12px;}
+.padding-b-17{padding-bottom: 17px;}
+.padding-b-19{padding-bottom: 19px;}
+.padding-b-21{padding-bottom: 21.4px;}
+.padding-b-23{padding-bottom: 23px;}
+
+.display-flex{display: flex;}
+.display-inline{display: inline;}
+
+.position-absolute{position: absolute;}
+.position-relative{position: relative;}
+
+.clr-primary{color: var(--clr-primary);}
+
+.text-oswald{font-family: var(--ff-oswald);}
+.text-montserrat-500{font-family: var(--ff-montserrat-500);}
+.text-montserrat-400{font-family: var(--ff-montserrat-400);}
+
+.bg-primary{background-color: var(--bg-primary);}
+.bg-footer-top{background-color: var(--bg-footer-top);}
+.bg-footer-bottom{background-color: var(--bg-footer-bottom);}
+.bg-form{background-color: var(--bg-form);}
+
+.text-400{font-weight: 400;}
+.text-500{font-weight: 500;}
+
+.button{
+  border: none;
+  border-radius: 2rem;
+  color: white;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal; 
+}
+
+/* Disabled elements */
+
+.primary-navbar{display: none;}
+
+/* CSS */
+
+.top-union{
+  min-width: 320px;
+  height: 59px;
+  background: url("../img/mobile/Union.svg")
+}
+
+.header-logo{
+  min-width: 78px;
+  min-height: 49px;
+  margin-left: 1.2rem;
+  z-index: 1;
+  background: url("../img/mobile/BlackLogo3.png")
+}
+
+.exit-icon{
+  width: 15px;
+  height: 15px;
+  z-index: 1;
+  right: 21px;
+  top: 18px;
+  background: url("../img/mobile/exit.svg")
+}
+
+.video-img{
+  min-width: 320px;
+  min-height: 169px;
+  z-index: -1;
+  background: url("../img/mobile/SparkleVideo1.png");
+}
+
+.play-icon{
+  min-width: 70px;
+  min-height: 70px;
+  top: 47%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  background: url("../img/mobile/Group2.svg");
+}
+
+.text .container{
+  margin: 0 auto;
+  text-align: center;
+  max-width: 280px;
+  max-height: 124px;
+  margin-top: 5rem;
+  margin-bottom: 5.25rem;
+  flex-shrink: 0;
+}
+
+.text-content {
+  font-size: 12px;
+  font-style: normal;
+  line-height: normal;
+}
+
+.images-sect .container{
+  margin-bottom: 7.5rem;
+}
+
+.cover-top {
+  min-width: 320px;
+  min-height: 24px;
+  top: 0;
+  background: url("../img/mobile/ripped67.svg");
+}
+
+.cover-bottom {
+  min-width: 320px;
+  min-height: 25px;
+  bottom: 0;
+  background: url("../img/mobile/ripped68.svg");
+}
+
+.images {
+  width: 320px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Brinuma_meita-15 {
+  width: 136px;
+  height: 82px;
+  background: url("../img/mobile/Brinuma_meita-15.png");
+}
+
+.Alina_11 {
+  width: 136px;
+  height: 85px;
+  background: url("../img/mobile/Alina_11.png");
+}
+
+.img-group{
+  align-self: end;
+  order: 1;
+}
+
+.Anda2-1 {
+  width: 184px;
+  height: 174px;
+  order: 2;
+  background: url("../img/mobile/Anda_21.png");
+}
+
+.Zanda-1{
+  width: 168px;
+  height: 183px;
+  order: 3;
+  background: url("../img/mobile/Zanda_1.png");
+}
+
+.Sibilia-4{
+  width: 152px;
+  height: 183px;
+  order: 4;
+  background: url("../img/mobile/Sibilla_4.png");
+}
+
+
+.buttons-sect .container{
+  text-align: center;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.btn-group h3{
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal; 
+  margin: 0 auto;
+  margin-bottom: 1.9rem;
+}.first-btn-title{
+  max-width: 394px;
+  min-height: 29px;
+}.second-btn-title{
+  max-width: 280px;
+  min-height: 55px;
+}
+
+.buttons-sect-btn{
+  width: 233px;
+  height: 50px;
+  margin-bottom: 5rem;
+}
+
+
+
+.form-sect .container{
+  text-align: center;
+}.form-sect .container h2{
+  margin: 0 auto;
+  margin-bottom: 1.8rem;
+}
+
+.form-container{
+  margin: 0 auto;
+  max-width: 280px;
+}
+
+.name-emails-group{
+  display: grid;
+}
+
+.form-title{
+    max-width: 280px;
+    min-height: 35px;
+    font-size: 24px;
+    font-style: normal; 
+    line-height: normal; 
+}
+  
+.form-sect form input, .form-sect form textarea{
+  background-color: var(--bg-form);
+  color: var(--clr-primary);
+  min-width: 280px;
+  min-height: 35px;
+  font-size: 14px;
+  font-style: normal; 
+  line-height: normal; 
+  letter-spacing: -0.21px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 10px;
+  padding-left: .65rem;
+}
+
+.form-sect form textarea{
+  padding-top: .6rem;
+}
+  
+.form-sect #comment{
+  max-width: 280px;
+  max-height: 150px;
+  margin-bottom: .2rem;
+  resize: none;
+}
+  
+.mandatory {
+  min-width: 280px;
+  min-height: 18px; 
+  font-size: 12px;
+  font-style: normal;
+  line-height: normal;
+  text-align: start;
+  margin-bottom: .5rem;
+}
+  
+#check-box{
+  min-width: 16px;
+  min-height: 16px;
+  border-radius: 3px;
+  accent-color: var(--bg-form);
+  margin-right: 1.35rem;
+}
+  
+.terms-container{
+  text-align: start;
+  font-size: 12px;
+  line-height: 1;
+}#terms{
+  font-style: normal;
+  line-height: normal;
+}
+  
+.submit-btn{
+  width: 140px;
+  height: 48px;
+  margin-top: 3.45rem;
+  margin-bottom: 7.5rem;
+}
+
+.logo-bg{
+  width: 322px;
+  height: 732.047px;
+  z-index: -1;
+  background: url("../img/mobile/Subtract.svg");
+}
+
+.logos-title {
+  font-size: 24px;
+  font-style: normal;
+  line-height: normal;
+  left: 6.1rem;
+  top: 5.25rem;
+}
+
+.getlogo{
+    width: 130px;
+    height: 44px;
+    top: 11.25rem;
+    left: 1.25rem;
+    background: url("../img/mobile/getlogo1.svg");
+}
+
+.sem_logo{
+    width: 131px;
+    height: 51px;
+    top: 11rem;
+    left: 10.5rem;
+    background: url("../img/mobile/sem_logo-21.svg");
+}
+
+.Citybee{
+    width: 131px;
+    height: 44px;
+    top: 16.5rem;
+    left: 1.25rem;
+    background: url("../img/mobile/Citybee-logo1.svg");
+}
+
+.logo1{
+    width: 48px;
+    height: 67px;
+    top: 16.1rem;
+    left: 13.1rem;
+    background: url("../img/mobile/logo11.svg");
+}
+
+footer .container p, footer .container a{
+  color: #FFF;
+  font-style: normal;
+  line-height: normal;
+}
+
+.footer-bg{
+  width: 320px;
+  height: 483px;
+  margin-top: -21.1rem;
+  background: url("../img/mobile/UnionFooter.svg");
+}
+
+.footer-logo{
+  width: 100px;
+  height: 100px; 
+  top: 2.7rem; 
+  left: 1.2rem;
+  background: url("../img/mobile/GoldenV2Logo3.png");
+}
+
+.info-container{
+  font-size: 12px;
+  top: 222.5px;
+  left: 20px;
+  text-align: start;
+}.info-container p{
+  padding-bottom: .65rem;
+}.info-name{
+  font-size: 18px;
+  top: 168px;
+  left: 20px;
+}
+
+.view-requsites{
+  font-size: 14px;
+  font-weight: 700;
+  width: 220px;
+  height: 21px;
+  bottom: 161.5px;
+  left: 21px;
+}
+
+.icons{
+  bottom: 103px;
+  left: 20px;
+}.facebook{
+  width: 12.5px;
+  height: 25px;
+  margin-right: 2.1rem;
+  background: url("../img/mobile/Facebook.svg");
+}.instagram{
+  width: 25px;
+  height: 25px;
+  background: url("../img/mobile/Instagram.svg");
+}
+
+.footer-logo-text{
+  font-size: 11px;
+  bottom: 53.5px;
+  left: 20px;
+}
+
+.policy{
+  font-size: 11px;
+  bottom: 32.5px;
+  left: 20px;
+}
+
+@media screen and (min-width: 320.1px) {
+
+  /* Disabled elements */
+
+  .view-requsites{display: none;}
+  .exit-icon{display: none;}
+
+  /* CSS */
+
+  body {
+    width: 1366px;  
+    height: 3651px;
+  }
+
+  .top-union {
+    width: 85.375rem;
+    height: 7.5rem;
+    z-index: -1;
+    background: url("../img/desktop/Union.svg");
+    }
+    
+  .header-top{
+    z-index: 1;
+    top: 0;
+  }
+    
+  .header-logo{
+    width: 159px;
+    height: 95px;
+    margin-left: 3.9rem;
+    margin-right: 5.25rem;
+    background: url("../img/desktop/BlackLogo3.jpg");
+  }
+    
+  .primary-navbar{
+    display: flex;
+    font-size: 18px;
+    font-style: normal;
+    line-height: normal;  
+    padding-top: 3.2rem;
+  }
+    
+  .video-img{
+    margin-top: -3rem;
+    min-height: 722px;
+    background: url("../img/desktop/Sparkle_Video_1.png");
+  }
+    
+  .play-icon {
+    top: 49.5%;
+    left: 49.5%;
+    transform: translate(-50%, -50%);
+    min-width: 110px;
+    min-height: 110px;
+    background: url("../img/desktop/Group2.svg");
+  }
+    
+  .text .container{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 9.325rem;
+    margin-bottom: 9.6rem;
+    max-width: 654px;
+    max-height: 114px;
+  }
+    
+  .text-content{
+    font-size: 18px;
+    font-style: normal; 
+    line-height: normal;
+  }
+    
+  .images-sect .container{
+    margin-bottom: 10.4rem;
+  }
+    
+  .images {
+    width: 1366px;
+    align-items: end;
+    display: flex;
+  }
+    
+  .cover-top {
+    width: 1366px;
+    height: 55px;
+    top: 0;
+    background: url("../img/desktop/ripped67.svg");
+  }
+    
+  .cover-bottom {
+    width: 1366px;
+    height: 55px;
+    bottom: -15px;
+    background: url("../img/desktop/ripped68.svg");
+  }
+    
+  .Brinuma_meita-15 {
+    width: 298px;
+    height: 180px;
+    background: url("../img/desktop/Brinuma_meita-15.jpg");
+  }
+    
+  .Alina_11 {
+    width: 298px;
+    height: 184px;
+    background: url("../img/desktop/Alina_11.jpg");
+  }
+    
+  .img-group{
+    order: 3;
+  }
+    
+  .Anda2-1 {
+    width: 406px;
+    height: 383px;
+    order: 4;
+    background: url("../img/desktop/Anda_21.jpg");
+  }
+    
+  .Zanda-1{
+    width: 328px;
+    height: 355px;
+    order: 1;
+    margin-bottom: .8rem;
+    background: url("../img/desktop/Zanda_1.jpg");
+  }
+    
+  .Sibilia-4{
+    width: 334px;
+    height: 364px;
+    order: 2;
+    background: url("../img/desktop/Sibilla_4.jpg");
+  }
+    
+  .buttons-sect .container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4.5rem;
+  }
+    
+  .btn-group{
+    text-align: center;
+    margin-left: 4.25rem;
+    margin-right: 1rem;
+  }.btn-group h3{
+    font-size: 24px;
+    margin-bottom: 2.6rem;
+  }
+    
+  .first-btn-title{
+    min-width: 394px;
+    min-height: 29px;
+  }
+    
+  .second-btn-title{
+    min-width: 500px;
+    min-height: 29px;
+  }
+    
+  .buttons-sect-btn{
+    width: 233px;
+    height: 50px;
+  }
+    
+  .form-sect .container{
+    align-items: center;
+    text-align: center;
+  }
+    
+  .form-container{
+    margin: 0 auto;
+    margin-top: 3.5rem;
+    max-width: 612px;
+  }
+    
+  .name-emails-group{
+    display: flex;
+  }
+
+  .form-title{
+    font-size: 30px; 
+    font-style: normal; 
+    line-height: normal; 
+  }
+    
+  .form-sect form input, .form-sect form textarea{
+    height: 43px; 
+    width: 296px; 
+    background-color: var(--bg-form);
+    color: var(--clr-primary);
+    font-size: 18px; 
+    font-style: normal; 
+    line-height: normal; 
+    letter-spacing: -0.27px;
+    padding-top: .3rem;
+    padding-left: .75rem;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    border: none;
+  }
+    
+  .name-emails-group{
+    justify-content: space-between;
+  }
+    
+  .form-sect #phone{
+    width: 612px; 
+  }
+    
+  .form-sect #comment{
+    min-width: 612px;
+    min-height: 232px;
+    padding-top: .6rem;
+    margin-bottom: .5rem;
+    resize: none;
+  }
+    
+  .mandatory {
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+    text-align: start;
+    margin-bottom: 1.87rem;
+  }
+    
+  #check-box{
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    accent-color: var(--bg-form);
+  }
+    
+  .terms-container{
+    width: 572px;
+    height: 39px;
+    padding-left: .1rem;
+    text-align: start;
+    line-height: 1;
+    }#terms{
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+  }
+    
+  .submit-btn{
+    width: 182px;
+    height: 62px;
+    font-size: 24px;
+    margin-top: 3.3rem;
+    margin-bottom: 9.35rem;
+  }
+    
+  .logo-bg{
+    min-width: 1366px;
+    min-height: 478px;
+    background: url("../img/desktop/Subtract.svg");
+  }
+
+  .logos-title{
+    font-size: 24px;
+    top: 98px;
+    left: 620px;
+  }
+    
+  .getlogo{
+    width: 241.951px;
+    height: 80px;
+    top: 217px;
+    left: 168px;
+    background: url("../img/desktop/getlogo1.svg");
+  }
+    
+  .sem_logo{
+    width: 209.315px;
+    height: 80px;
+    top: 217px;
+    left: 495px;
+    background: url("../img/desktop/sem_logo-21.svg");
+  }
+    
+  .Citybee{
+    width: 238.961px;
+    height: 80px;
+    top: 217px;
+    left: 788px;
+    background: url("../img/desktop/Citybee-logo1.svg");
+  }
+    
+  .logo1{
+    width: 84.771px;
+    height: 120px;
+    top: 198px;
+    left: 1112px;
+    background: url("../img/desktop/logo11.svg");
+  }
+    
+  footer .container p, footer .container a{
+    color: #FFF;
+    font-style: normal;
+    line-height: normal;
+  }
+    
+  .footer-bg{
+    width: 1366px;
+    height: 376px;  
+    margin-top: -17.65rem;
+    background: url("../img/desktop/UnionFooter.svg");
+  }
+
+  .footer-logo{
+    width: 182px;
+    height: 182px;
+    top: 70px;
+    left: 61px;
+    background: url("../img/desktop/GoldenV2Logo3.png");
+  }
+    
+  .footer-logo-text{
+    width: 182px;
+    height: 38px;
+    font-size: 14px;
+    bottom: 1rem;
+    left: 61px;
+  }
+    
+  .navbar{
+    font-size: 18px;
+    font-style: normal;
+    line-height: normal;
+    top: 68px;
+    left: 23.8rem;
+  }.navbar-first-child{
+    padding-left: .2rem;
+  }
+    
+  .requsites{
+    font-size: 18px;
+    top: 4.25rem;
+    left: 40.15rem;
+  }.requsites-title{
+    font-size: 24px;
+  }
+    
+  .info-name{
+    font-size: 24px;
+    top: 4.35rem;
+    left: auto;
+    right: 65px;
+  }
+    
+  .info-container{
+    font-size: 18px;
+    text-align: end;
+    top: 7rem;
+    right: 4rem;
+  }.info-container p{
+    padding-bottom: .65rem;
+  }
+    
+  .icons{
+    bottom: 5.35rem;
+    right: 3.85rem;
+    left: auto;
+  }.facebook{
+    width: 18px;
+    height: 36px;
+    margin: 0;
+    background: url("../img/desktop/facebook.svg");
+  }.instagram{
+    width: 36px;
+    height: 36px;
+    margin-left: 1.9rem;
+    background: url("../img/desktop/instagram.svg");
+  }
+    
+  .policy{
+    font-size: 14px;
+    bottom: 1.1rem;
+    right: 3.85rem;
+    left: auto;
+  }
+
+}
