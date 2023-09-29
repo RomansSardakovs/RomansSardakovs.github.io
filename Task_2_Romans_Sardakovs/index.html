@@ -14,7 +14,8 @@
                 <div class="header-top | position-relative display-flex">
                     <div class="top-union | position-absolute" ></div>
                     <div class="header-logo"></div>
-                    <ul  class="primary-navbar | display-flex text-montserrat-500 text-500">
+                    <div class="exit-icon | position-absolute"></div>
+                    <ul  class="primary-navbar | text-montserrat-500 text-500">
                         <li class="padding-r-36"><a href="">Ideja</a></li>
                         <li class="padding-r-36"><a href="">Piesaki Sapni</a></li>
                         <li class="padding-r-39"><a href="">Uzņēmējiem</a></li>
@@ -24,28 +25,25 @@
                         <li><a href="">LV</a></li>
                     </ul>
                 </div>
-                
             </div>
-       </header>
+        </header>
     
-       <div class="video-img-group">
-        <div class="video-img | position-relative" >
-            <img src="assets/img/desktop/Sparkle_Video_1.png" alt="">
-            <div class="play-icon | position-absolute">
-                <img src="assets/img/desktop/Group 2.svg" alt="">
+        <div class="video-img-group">
+            <div class="video-img | position-relative" >
+                <div class="play-icon | position-absolute"></div>
             </div>
-        </div>
         </div>
 
-       <section class="text">
-        <div class="container">
-            <div class="text-content">
-                <p class="clr-primary text-montserrat-400 text-400">
-                    SparkleHeart ir biedrība, kas radīta, lai palīdzētu cilvēkiem piepildīt pat 
-                    pārdrošākos sapņus. Šeit satiekas sapņotāji un viņu atbalstītāji -
-                    uzņēmumi, kas sniedz palīdzīgu roku, lai kopā pasauli padarītu par
-                    labāku vietu mums visiem.Mēs esam gatavi palīdzēt Tev piepildīt sapni.
-                    Kā pamats iedvesmai - tiek radīti arī 99 stāsti par Latvijas sievietēm.</p>
+        <section class="text">
+            <div class="container">
+                <div class="text-content">
+                    <p class="clr-primary text-montserrat-400 text-400">
+                        SparkleHeart ir biedrība, kas radīta, lai palīdzētu cilvēkiem piepildīt pat 
+                        pārdrošākos sapņus. Šeit satiekas sapņotāji un viņu atbalstītāji -
+                        uzņēmumi, kas sniedz palīdzīgu roku, lai kopā pasauli padarītu par
+                        labāku vietu mums visiem.Mēs esam gatavi palīdzēt Tev piepildīt sapni.
+                        Kā pamats iedvesmai - tiek radīti arī 99 stāsti par Latvijas sievietēm.
+                    </p>
                 </div>
             </div>
        </section>
@@ -53,29 +51,28 @@
 
        <section class="images-sect">
         <div class="container | position-relative">
-            <img class="images-cover" id="top-cover" src="assets/img/desktop/ripped 6 7.svg" alt="">
-                <div class="images | position-relative display-flex">
-                    <img class="zanda-1" src="assets/img/desktop/Zanda_1.jpg" alt="">
-                    <img class="sibilia-4" src="assets/img/desktop/Sibilla_4.jpg" alt="">
-                    <div>
-                        <img src="assets/img/desktop/Brinuma_meita-15.jpg" alt="">
-                        <img src="assets/img/desktop/Alina_1 1.jpg" alt="">
-                    </div>
-                    <img class="anda2-1" src="assets/img/desktop/Anda_2 1.jpg" alt="">
+            <div class="images">
+                <div class="img-group">
+                    <div class="Brinuma_meita-15"></div>
+                    <div class="Alina_11"></div>
                 </div>
-            <img class="images-cover" id="bottom-cover" src="assets/img/desktop/ripped 6 8.svg" alt="">
-        </div>
+                <div class="Anda2-1"></div>
+                <div class="Zanda-1"></div>
+                <div class="Sibilia-4"></div>
+            </div>
+            <div class="cover-top | position-absolute"></div>
+            <div class="cover-bottom | position-absolute"></div>
        </section>
     
        <section class="buttons-sect">
-        <div class="container | display-flex">
-            <div class="left-btn-group">
-                <h3 class="left-btn-title | text-oswald text-500 clr-primary">VĒLIES PIEPILDĪT SAVU SAPNI?</h3>
-                <button class="left-btn | button bg-primary text-montserrat-500 text-500">Sapņotājiem</button>
+        <div class="container">
+            <div class="btn-group">
+                <h3 class="first-btn-title | text-oswald text-500 clr-primary">VĒLIES PIEPILDĪT SAVU SAPNI?</h3>
+                <button class="first-btn buttons-sect-btn | button bg-primary text-montserrat-500 text-500">Sapņotājiem</button>
             </div>
-            <div class="right-btn-group">
-                <h3 class="right-btn-title | text-oswald text-500 clr-primary">VĒLIES PALĪDZĒT KĀDĀM PIEPILDĪT SAPNI?</h3>
-                <button class="right-btn | button bg-primary text-montserrat-500 text-500">Uzņēmējiem</button>
+            <div class="btn-group">
+                <h3 class="second-btn-title | text-oswald text-500 clr-primary">VĒLIES PALĪDZĒT KĀDĀM PIEPILDĪT SAPNI?</h3>
+                <button class="second-btn buttons-sect-btn | button bg-primary text-montserrat-500 text-500">Uzņēmējiem</button>
             </div>
         </div>
        </section>
@@ -85,8 +82,10 @@
             <h2 class="form-title | clr-primary text-oswald text-500">SAZINĀTIES AR MUMS</h2>
                 <div class="form-container | text-montserrat-400 text-400">
                     <form>
-                        <input type="text" id="name-surname" placeholder="Vārds, Uzvārds*">
-                        <input type="email" id="email" placeholder="E-pasts*"><br>
+                        <div class="name-emails-group | display-flex">
+                            <input type="text" id="name-surname" placeholder="Vārds, Uzvārds*">
+                            <input type="email" id="email" placeholder="E-pasts*">
+                        </div>
                         <input type="tel" id="phone" placeholder="Telefons*">
                         <textarea cols="30" rows="10" id="comment" placeholder="Jautājums, vai komentārs*"></textarea>
                     </form>
@@ -114,28 +113,42 @@
                 <h4 class="clr-primary text-oswald text-500">ATBALSTĪTĀJI</h4>
             </div>
             <div class="container-logos | display-flex">
-                <img class="logo-bg" src="assets/img/desktop/Subtract.svg" alt="">
+                <div class="logo-bg"></div>
                 <div class="logos | position-absolute">
-                    <img src="assets/img/desktop/getlogo 1.png" alt="">
-                    <img src="assets/img/desktop/sem_logo-2 1.png" alt="">
-                    <img src="assets/img/desktop/Citybee-logo 1.png" alt="">
-                    <img src="assets/img/desktop/logo1 1.png" alt="">
+                    <div class="getlogo | position-absolute"></div>
+                    <div class="sem_logo | position-absolute"></div>
+                    <div class="Citybee | position-absolute"></div>
+                    <div class="logo1 | position-absolute"></div>
                 </div>
             </div>
         </div>
        </section>
     
        <footer>
-        <div class="container | position-relative text-montserrat-500 text-500">
-            <div class="footer-bg">
-                <img src="assets/img/desktop/Unionfooter.svg" alt="">
+            <div class="container | position-relative text-montserrat-500 text-500">
+            <div class="footer-bg | position-relative"></div>
+
+            <div class="footer-logo | position-absolute"></div>
+
+            <p class="info-name | position-absolute">Juris Gogulis</p>
+            <div class="info-container | position-absolute">
+                <p>juris.gogulis@sparkleheart.org</p>
+                <p>+37126890034</p>
+                <p>Biķernieku iela 24a - 5, LV-1006</p>
+            </div>
+            
+            <p class="view-requsites | position-absolute">Skatīt rekvizītus</p>
+
+            <div class="icons | position-absolute text-Montserrat-500">
+                <div class="icons-group | display-flex">
+                    <div class="facebook"></div>
+                    <div class="instagram"></div>
+                </div>
             </div>
 
-            <div class="logo | position-absolute text-Montserrat-500">
-                <img src="assets/img/desktop/GoldenV2Logo 3.png" alt="">
-                <p>© SparkleHeart 2020.<br>Visas tiesības aizsargātas.</p>
-            </div>
-
+            <p class="footer-logo-text | position-absolute">© SparkleHeart 2020. Visas tiesības aizsargātas.</p>
+            <p class="policy | position-absolute">Privātuma politika</p>
+            
             <div class="navbar | position-absolute text-Montserrat-500">
                 <ul>
                     <div class="navbar-first-child">
@@ -155,24 +168,8 @@
                 <p class="padding-b-9">Banka: SWEDBANK A/S</p>
                 <p>LV52HABA0551047652465</p>
             </div>
-
-            <div class="info | position-absolute text-Montserrat-500">
-                <p class="info-name | padding-b-15">Juris Gogulis</p>
-                <p class="padding-b-12">juris.gogulis@sparkleheart.org</p>
-                <p class="padding-b-11">+37126890034</p>
-                <p>Biķernieku iela 24a - 5, LV-1006</p>
-            </div>
-
-            <div class="icons | position-absolute text-Montserrat-500">
-                <div class="icons-group | display-flex">
-                    <img class="facebook" src="assets/img/desktop/facebook.svg" alt="">
-                    <img class="instagram" src="assets/img/desktop/instagram.svg" alt="">
-                </div>
-                <p>Privātuma politika</p>
-            </div>
-        </div>
-
-       </footer>
+        </footer>
+       
     </main>
 </body>
 </html>

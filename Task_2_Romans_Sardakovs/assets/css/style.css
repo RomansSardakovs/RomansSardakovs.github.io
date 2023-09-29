@@ -48,12 +48,6 @@ box-sizing: border-box;
   color: black;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-list-style: none;
-}
-
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
@@ -67,14 +61,11 @@ body {
 
 /* Set core body defaults */
 body {
-  max-width: 1366px;  
+  width: 320px;  
+  height: 2970px;
   margin: 0 auto;   
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-}
-  
-main{
-  width: 1366px;
 }
 
 /* Make images easier to work with */
@@ -100,13 +91,18 @@ html:focus-within {
 }
 }
 
+main{
+  overflow: hidden;
+}
+
 a {
   text-decoration-skip-ink: auto;
   text-decoration: none;
 }
 
 li,
-ol {
+ol,
+ul {
   list-style-type: none;    
 }
 
@@ -122,15 +118,13 @@ button {
 .padding-r-63{padding-right: 63px;}
 
 .padding-b-9{padding-bottom: 9px;}
-.padding-b-11{padding-bottom: 11px;}
 .padding-b-12{padding-bottom: 12px;}
-.padding-b-15{padding-bottom: 15px;}
 .padding-b-17{padding-bottom: 17px;}
 .padding-b-19{padding-bottom: 19px;}
 .padding-b-21{padding-bottom: 21.4px;}
 .padding-b-23{padding-bottom: 23px;}
 
-.display-flex {display: flex;}
+.display-flex{display: flex;}
 .display-inline{display: inline;}
 
 .position-absolute{position: absolute;}
@@ -151,393 +145,746 @@ button {
 .text-500{font-weight: 500;}
 
 .button{
-border: none;
-border-radius: 2rem;
-color: white;
-flex-shrink: 0;
-font-size: 18px;
-font-style: normal;
-line-height: normal; 
+  border: none;
+  border-radius: 2rem;
+  color: white;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal; 
 }
+
+/* Disabled elements */
+
+.primary-navbar{display: none;}
 
 /* CSS */
 
-.top-union {
-width: 1366px;
-height: 120px;
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-background: url("../img/desktop/Union.svg");
-z-index: -1;
-}
-
-.header-top{
-z-index: 1;
-width: 100%;
-top: 0;
+.top-union{
+  min-width: 320px;
+  height: 59px;
+  background: url("../img/mobile/Union.svg")
 }
 
 .header-logo{
-  width: 159px;
-  height: 96px;
-  margin-left: 3.9rem;
-  margin-right: 5.25rem;
-  background: url("../img/desktop/BlackLogo3.jpg"), lightgray 50% / cover no-repeat;
+  min-width: 78px;
+  min-height: 49px;
+  margin-left: 1.2rem;
+  z-index: 1;
+  background: url("../img/mobile/BlackLogo3.png")
 }
 
-.primary-navbar{
-font-size: 18px;
-font-style: normal;
-line-height: normal;  
-padding-top: 3.2rem;
+.exit-icon{
+  width: 15px;
+  height: 15px;
+  z-index: 1;
+  right: 21px;
+  top: 18px;
+  background: url("../img/mobile/exit.svg")
 }
 
 .video-img{
-margin-top: -3rem;
+  min-width: 320px;
+  min-height: 169px;
+  z-index: -1;
+  background: url("../img/mobile/SparkleVideo1.png");
 }
 
-.play-icon {
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+.play-icon{
+  min-width: 70px;
+  min-height: 70px;
+  top: 47%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  background: url("../img/mobile/Group2.svg");
 }
 
 .text .container{
   margin: 0 auto;
   text-align: center;
-  margin-top: 9.325rem;
-  margin-bottom: 10.25rem;
-  max-width: 654px;
-  max-height: 114px;
+  max-width: 280px;
+  max-height: 124px;
+  margin-top: 5rem;
+  margin-bottom: 5.25rem;
   flex-shrink: 0;
 }
 
-.text-content{
-font-size: 18px;
-font-style: normal; 
-line-height: normal;
+.text-content {
+  font-size: 12px;
+  font-style: normal;
+  line-height: normal;
 }
 
-.images-sect{
-margin-bottom: 9.8rem;
+.images-sect .container{
+  margin-bottom: 7.5rem;
 }
 
-.images{
-max-height: 383px;
-justify-content: center;
-align-items: center;
+.cover-top {
+  min-width: 320px;
+  min-height: 24px;
+  top: 0;
+  background: url("../img/mobile/ripped67.svg");
 }
 
-.images-cover{
-position: absolute;
-z-index: 1;
-}#top-cover{
-top: -10px;
-}#bottom-cover{
-bottom: -5px;
+.cover-bottom {
+  min-width: 320px;
+  min-height: 25px;
+  bottom: 0;
+  background: url("../img/mobile/ripped68.svg");
 }
 
-.zanda-1{
-max-height: 355px;
-margin-bottom: 1rem;
+.images {
+  width: 320px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.sibilia-4{
-max-height: 364px; ;
+.Brinuma_meita-15 {
+  width: 136px;
+  height: 82px;
+  background: url("../img/mobile/Brinuma_meita-15.png");
 }
 
-.anda2-1{
-margin-bottom: 1rem;
+.Alina_11 {
+  width: 136px;
+  height: 85px;
+  background: url("../img/mobile/Alina_11.png");
 }
+
+.img-group{
+  align-self: end;
+  order: 1;
+}
+
+.Anda2-1 {
+  width: 184px;
+  height: 174px;
+  order: 2;
+  background: url("../img/mobile/Anda_21.png");
+}
+
+.Zanda-1{
+  width: 168px;
+  height: 183px;
+  order: 3;
+  background: url("../img/mobile/Zanda_1.png");
+}
+
+.Sibilia-4{
+  width: 152px;
+  height: 183px;
+  order: 4;
+  background: url("../img/mobile/Sibilla_4.png");
+}
+
 
 .buttons-sect .container{
-justify-content: center;
-justify-content: space-between;
-margin-bottom: 9.5rem;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 2.5rem;
 }
 
-.buttons-sect h3 {
-font-size: 24px;
-font-style: normal;
-line-height: normal;  
+.btn-group h3{
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal; 
+  margin: 0 auto;
+  margin-bottom: 1.9rem;
+}.first-btn-title{
+  max-width: 394px;
+  min-height: 29px;
+}.second-btn-title{
+  max-width: 280px;
+  min-height: 55px;
 }
 
-.left-btn-group{
-text-align: center;
-padding-left: 17.2rem;
-}.left-btn-title{
-padding-bottom: 2.6rem;
-}.left-btn{
-width: 233px;
-height: 50px;
+.buttons-sect-btn{
+  width: 233px;
+  height: 50px;
+  margin-bottom: 5rem;
 }
 
-.right-btn-group{
-text-align: center;
-padding-right: 13.8rem;
-}.right-btn-title{
-padding-bottom: 2.6rem;
-}.right-btn{
-width: 233px;
-height: 50px;
-}
+
 
 .form-sect .container{
-align-items: center;
-text-align: center;
+  text-align: center;
+}.form-sect .container h2{
+  margin: 0 auto;
+  margin-bottom: 1.8rem;
 }
 
 .form-container{
-margin: 0 auto;
-max-width: 612px;
+  margin: 0 auto;
+  max-width: 280px;
+}
+
+.name-emails-group{
+  display: grid;
 }
 
 .form-title{
-font-size: 30px; 
-font-style: normal; 
-line-height: normal; 
-margin-bottom: 3.5rem;
+    max-width: 280px;
+    min-height: 35px;
+    font-size: 24px;
+    font-style: normal; 
+    line-height: normal; 
 }
-
+  
 .form-sect form input, .form-sect form textarea{
-height: 43px; 
-width: 296px; 
-background-color: var(--bg-form);
-color: var(--clr-primary);
-font-size: 18px; 
-font-style: normal; 
-line-height: normal; 
-letter-spacing: -0.27px;
-padding-top: .3rem;
-padding-left: .75rem;
-margin-bottom: 1rem;
-border-radius: .5rem;
-border: none;
+  background-color: var(--bg-form);
+  color: var(--clr-primary);
+  min-width: 280px;
+  min-height: 35px;
+  font-size: 14px;
+  font-style: normal; 
+  line-height: normal; 
+  letter-spacing: -0.21px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 10px;
+  padding-left: .65rem;
 }
 
-.form-sect #name-surname{
-margin-right: .45rem;
+.form-sect form textarea{
+  padding-top: .6rem;
 }
-
-.form-sect #email{
-margin-left: .45rem;
-}
-
-.form-sect #phone{
-width: 612px; 
-}
-
+  
 .form-sect #comment{
-width: 612px;
-height: 232px;
-padding-top: .6rem;
-resize: none;
-margin-bottom: .5rem;
+  max-width: 280px;
+  max-height: 150px;
+  margin-bottom: .2rem;
+  resize: none;
 }
-
+  
 .mandatory {
-font-size: 14px;
-font-style: normal;
-line-height: normal;
-text-align: start;
-margin-bottom: 1.87rem;
+  min-width: 280px;
+  min-height: 18px; 
+  font-size: 12px;
+  font-style: normal;
+  line-height: normal;
+  text-align: start;
+  margin-bottom: .5rem;
 }
-
+  
 #check-box{
-width: 16px;
-height: 16px;
-border-radius: 3px;
-margin-left: .2rem;
-accent-color: var(--bg-form);
+  min-width: 16px;
+  min-height: 16px;
+  border-radius: 3px;
+  accent-color: var(--bg-form);
+  margin-right: 1.35rem;
 }
-
+  
 .terms-container{
-text-align: start;
-margin-left: 1.35rem;
-line-height: 1;
+  text-align: start;
+  font-size: 12px;
+  line-height: 1;
 }#terms{
-font-size: 14px;
-font-style: normal;
-line-height: normal;
+  font-style: normal;
+  line-height: normal;
 }
-
+  
 .submit-btn{
-width: 182px;
-height: 62px;
-font-size: 24px;
-margin-top: 3.3rem;
-margin-bottom: 9.5rem;
+  width: 140px;
+  height: 48px;
+  margin-top: 3.45rem;
+  margin-bottom: 7.5rem;
 }
 
-.container-logos {
-text-align: center;
-align-items: center;
-justify-content: center;
+.logo-bg{
+  width: 322px;
+  height: 732.047px;
+  z-index: -1;
+  background: url("../img/mobile/Subtract.svg");
 }
 
 .logos-title {
-font-size: 24px;
-font-style: normal;
-line-height: normal;
-left: 38.88rem;
-top: 6.25rem;
+  font-size: 24px;
+  font-style: normal;
+  line-height: normal;
+  left: 6.1rem;
+  top: 5.25rem;
 }
 
-.logos img{
-display: inline;
-padding: 0 2.5rem;
+.getlogo{
+    width: 130px;
+    height: 44px;
+    top: 11.25rem;
+    left: 1.25rem;
+    background: url("../img/mobile/getlogo1.svg");
+}
+
+.sem_logo{
+    width: 131px;
+    height: 51px;
+    top: 11rem;
+    left: 10.5rem;
+    background: url("../img/mobile/sem_logo-21.svg");
+}
+
+.Citybee{
+    width: 131px;
+    height: 44px;
+    top: 16.5rem;
+    left: 1.25rem;
+    background: url("../img/mobile/Citybee-logo1.svg");
+}
+
+.logo1{
+    width: 48px;
+    height: 67px;
+    top: 16.1rem;
+    left: 13.1rem;
+    background: url("../img/mobile/logo11.svg");
 }
 
 footer .container p, footer .container a{
-color: #FFF;
-font-style: normal;
-line-height: normal;
+  color: #FFF;
+  font-style: normal;
+  line-height: normal;
 }
 
 .footer-bg{
-margin-top: -2rem;
+  width: 320px;
+  height: 483px;
+  margin-top: -21.1rem;
+  background: url("../img/mobile/UnionFooter.svg");
 }
 
-.logo {
-font-size: 14px;
-font-style: normal;
-line-height: normal;
-
-top: 4.45rem;
-left: 3.85rem;
-}.logo img {
-padding-bottom: 4.25rem;
+.footer-logo{
+  width: 100px;
+  height: 100px; 
+  top: 2.7rem; 
+  left: 1.2rem;
+  background: url("../img/mobile/GoldenV2Logo3.png");
 }
 
-.navbar{
-font-size: 18px;
-font-style: normal;
-line-height: normal;
-
-top: 4.25rem;
-left: 23.8rem;
-}.navbar-first-child{
-padding-left: .2rem;
-}
-
-.requsites{
-font-size: 18px;
-font-style: normal;
-line-height: normal;
-
-top: 4.25rem;
-left: 40.15rem;
-}.requsites-title{
-font-size: 24px;
-}
-
-.info{
-font-size: 18px;
-text-align: right;
-font-style: normal;
-line-height: normal;
-
-top: 4.25rem;
-left: 63.8rem;
+.info-container{
+  font-size: 12px;
+  top: 222.5px;
+  left: 20px;
+  text-align: start;
+}.info-container p{
+  padding-bottom: .65rem;
 }.info-name{
-font-size: 24px;
+  font-size: 18px;
+  top: 168px;
+  left: 20px;
+}
+
+.view-requsites{
+  font-size: 14px;
+  font-weight: 700;
+  width: 220px;
+  height: 21px;
+  bottom: 161.5px;
+  left: 21px;
 }
 
 .icons{
-font-size: 14px;
-font-style: normal;
-line-height: normal;
-
-top: 15.8rem;
-left: 73.4rem;
-}.icons p{
-margin-top: 3.15rem;
+  bottom: 103px;
+  left: 20px;
+}.facebook{
+  width: 12.5px;
+  height: 25px;
+  margin-right: 2.1rem;
+  background: url("../img/mobile/Facebook.svg");
+}.instagram{
+  width: 25px;
+  height: 25px;
+  background: url("../img/mobile/Instagram.svg");
 }
 
-.icons-group{
-margin-left: 3rem;
+.footer-logo-text{
+  font-size: 11px;
+  bottom: 53.5px;
+  left: 20px;
 }
 
-.facebook{
-width: 18px;
-height: 36px;
-margin-right: 1.8rem;
+.policy{
+  font-size: 11px;
+  bottom: 32.5px;
+  left: 20px;
 }
 
-.instagram{
-width: 36px;
-height: 36px;
-}
+@media screen and (min-width: 320.1px) {
 
-@media (max-width: 320px) {
+  /* Disabled elements */
 
-  main{
-    width: 320px;
-    height: 2971px;
-    margin: 0 auto; 
+  .view-requsites{display: none;}
+  .exit-icon{display: none;}
+
+  /* CSS */
+
+  body {
+    width: 1366px;  
+    height: 3651px;
   }
 
-  header .container{
-    max-width: 320px;
-  }
-
-  .top-union{
-    max-width: 320px;
-    height: 59px;
-    background: url("../img/mobile/Union.svg")
-  }
-
-  .header-logo{
-    max-width: 78px;
-    max-height: 49px;
-    margin-left: 1.2rem;
-    z-index: 1;
-    background: url("../img/mobile/BlackLogo3.png")
-  }
-
-  .primary-navbar{
-    display: none;
-  }
-
-  .text{
-    max-width: 280px;
-    max-height: 124px;
-    
-  }
-
- 
-
-  .video-img{
+  .top-union {
+    width: 85.375rem;
+    height: 7.5rem;
     z-index: -1;
+    background: url("../img/desktop/Union.svg");
+    }
+    
+  .header-top{
+    z-index: 1;
+    top: 0;
   }
-
-  .play-icon{
-    top: 50%;
-    left: 50%;
+    
+  .header-logo{
+    width: 159px;
+    height: 95px;
+    margin-left: 3.9rem;
+    margin-right: 5.25rem;
+    background: url("../img/desktop/BlackLogo3.jpg");
+  }
+    
+  .primary-navbar{
+    display: flex;
+    font-size: 18px;
+    font-style: normal;
+    line-height: normal;  
+    padding-top: 3.2rem;
+  }
+    
+  .video-img{
+    margin-top: -3rem;
+    min-height: 722px;
+    background: url("../img/desktop/Sparkle_Video_1.png");
+  }
+    
+  .play-icon {
+    top: 49.5%;
+    left: 49.5%;
     transform: translate(-50%, -50%);
+    min-width: 110px;
+    min-height: 110px;
+    background: url("../img/desktop/Group2.svg");
+  }
+    
+  .text .container{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 9.325rem;
+    margin-bottom: 9.6rem;
+    max-width: 654px;
+    max-height: 114px;
+  }
+    
+  .text-content{
+    font-size: 18px;
+    font-style: normal; 
+    line-height: normal;
+  }
+    
+  .images-sect .container{
+    margin-bottom: 10.4rem;
+  }
+    
+  .images {
+    width: 1366px;
+    align-items: end;
+    display: flex;
+  }
+    
+  .cover-top {
+    width: 1366px;
+    height: 55px;
+    top: 0;
+    background: url("../img/desktop/ripped67.svg");
+  }
+    
+  .cover-bottom {
+    width: 1366px;
+    height: 55px;
+    bottom: -15px;
+    background: url("../img/desktop/ripped68.svg");
+  }
+    
+  .Brinuma_meita-15 {
+    width: 298px;
+    height: 180px;
+    background: url("../img/desktop/Brinuma_meita-15.jpg");
+  }
+    
+  .Alina_11 {
+    width: 298px;
+    height: 184px;
+    background: url("../img/desktop/Alina_11.jpg");
+  }
+    
+  .img-group{
+    order: 3;
+  }
+    
+  .Anda2-1 {
+    width: 406px;
+    height: 383px;
+    order: 4;
+    background: url("../img/desktop/Anda_21.jpg");
+  }
+    
+  .Zanda-1{
+    width: 328px;
+    height: 355px;
+    order: 1;
+    margin-bottom: .8rem;
+    background: url("../img/desktop/Zanda_1.jpg");
+  }
+    
+  .Sibilia-4{
+    width: 334px;
+    height: 364px;
+    order: 2;
+    background: url("../img/desktop/Sibilla_4.jpg");
+  }
+    
+  .buttons-sect .container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4.5rem;
+  }
+    
+  .btn-group{
+    text-align: center;
+    margin-left: 4.25rem;
+    margin-right: 1rem;
+  }.btn-group h3{
+    font-size: 24px;
+    margin-bottom: 2.6rem;
+  }
+    
+  .first-btn-title{
+    min-width: 394px;
+    min-height: 29px;
+  }
+    
+  .second-btn-title{
+    min-width: 500px;
+    min-height: 29px;
+  }
+    
+  .buttons-sect-btn{
+    width: 233px;
+    height: 50px;
+  }
+    
+  .form-sect .container{
+    align-items: center;
+    text-align: center;
+  }
+    
+  .form-container{
+    margin: 0 auto;
+    margin-top: 3.5rem;
+    max-width: 612px;
+  }
+    
+  .name-emails-group{
+    display: flex;
   }
 
-  .video-img-group{
-    display: none;
+  .form-title{
+    font-size: 30px; 
+    font-style: normal; 
+    line-height: normal; 
+  }
+    
+  .form-sect form input, .form-sect form textarea{
+    height: 43px; 
+    width: 296px; 
+    background-color: var(--bg-form);
+    color: var(--clr-primary);
+    font-size: 18px; 
+    font-style: normal; 
+    line-height: normal; 
+    letter-spacing: -0.27px;
+    padding-top: .3rem;
+    padding-left: .75rem;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    border: none;
+  }
+    
+  .name-emails-group{
+    justify-content: space-between;
+  }
+    
+  .form-sect #phone{
+    width: 612px; 
+  }
+    
+  .form-sect #comment{
+    min-width: 612px;
+    min-height: 232px;
+    padding-top: .6rem;
+    margin-bottom: .5rem;
+    resize: none;
+  }
+    
+  .mandatory {
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+    text-align: start;
+    margin-bottom: 1.87rem;
+  }
+    
+  #check-box{
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    accent-color: var(--bg-form);
+  }
+    
+  .terms-container{
+    width: 572px;
+    height: 39px;
+    padding-left: .1rem;
+    text-align: start;
+    line-height: 1;
+    }#terms{
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+  }
+    
+  .submit-btn{
+    width: 182px;
+    height: 62px;
+    font-size: 24px;
+    margin-top: 3.3rem;
+    margin-bottom: 9.35rem;
+  }
+    
+  .logo-bg{
+    min-width: 1366px;
+    min-height: 478px;
+    background: url("../img/desktop/Subtract.svg");
   }
 
-  .images-sect{
-    display: none;
+  .logos-title{
+    font-size: 24px;
+    top: 98px;
+    left: 620px;
+  }
+    
+  .getlogo{
+    width: 241.951px;
+    height: 80px;
+    top: 217px;
+    left: 168px;
+    background: url("../img/desktop/getlogo1.svg");
+  }
+    
+  .sem_logo{
+    width: 209.315px;
+    height: 80px;
+    top: 217px;
+    left: 495px;
+    background: url("../img/desktop/sem_logo-21.svg");
+  }
+    
+  .Citybee{
+    width: 238.961px;
+    height: 80px;
+    top: 217px;
+    left: 788px;
+    background: url("../img/desktop/Citybee-logo1.svg");
+  }
+    
+  .logo1{
+    width: 84.771px;
+    height: 120px;
+    top: 198px;
+    left: 1112px;
+    background: url("../img/desktop/logo11.svg");
+  }
+    
+  footer .container p, footer .container a{
+    color: #FFF;
+    font-style: normal;
+    line-height: normal;
+  }
+    
+  .footer-bg{
+    width: 1366px;
+    height: 376px;  
+    margin-top: -17.65rem;
+    background: url("../img/desktop/UnionFooter.svg");
   }
 
-  .buttons-sect{
-    display: none;
+  .footer-logo{
+    width: 182px;
+    height: 182px;
+    top: 70px;
+    left: 61px;
+    background: url("../img/desktop/GoldenV2Logo3.png");
   }
-
-  .form-sect{
-    display: none;
+    
+  .footer-logo-text{
+    width: 182px;
+    height: 38px;
+    font-size: 14px;
+    bottom: 1rem;
+    left: 61px;
   }
-
-  .logos-sect{
-    display: none;
+    
+  .navbar{
+    font-size: 18px;
+    font-style: normal;
+    line-height: normal;
+    top: 68px;
+    left: 23.8rem;
+  }.navbar-first-child{
+    padding-left: .2rem;
   }
-
-  footer{
-    display: none;
+    
+  .requsites{
+    font-size: 18px;
+    top: 4.25rem;
+    left: 40.15rem;
+  }.requsites-title{
+    font-size: 24px;
+  }
+    
+  .info-name{
+    font-size: 24px;
+    top: 4.35rem;
+    left: auto;
+    right: 65px;
+  }
+    
+  .info-container{
+    font-size: 18px;
+    text-align: end;
+    top: 7rem;
+    right: 4rem;
+  }.info-container p{
+    padding-bottom: .65rem;
+  }
+    
+  .icons{
+    bottom: 5.35rem;
+    right: 3.85rem;
+    left: auto;
+  }.facebook{
+    width: 18px;
+    height: 36px;
+    margin: 0;
+    background: url("../img/desktop/facebook.svg");
+  }.instagram{
+    width: 36px;
+    height: 36px;
+    margin-left: 1.9rem;
+    background: url("../img/desktop/instagram.svg");
+  }
+    
+  .policy{
+    font-size: 14px;
+    bottom: 1.1rem;
+    right: 3.85rem;
+    left: auto;
   }
 
 }
