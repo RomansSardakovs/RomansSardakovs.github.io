@@ -1,11 +1,12 @@
 :root{
-
   --clr-primary: #2F4858;
+  --clr-footer: #FFFFFF;
+  --clr-button: #FFFFFF;
 
   --bg-primary: #FFA800;
   --bg-footer-top: #FFCB66;
   --bg-footer-bottom: #2F4858;
-  --bg-form: rgba(196, 196, 196, 0.40);
+  --bg-form: #c4c4c466;
 
   --ff-montserrat-400: Montserrat-400;
   --ff-montserrat-500: Montserrat-500;
@@ -13,108 +14,77 @@
 
   --fw-400: 400;
   --fw-500: 500;
-
 }
 
 @font-face {
-  font-family: Oswald;
-  src: url('../font/Oswald/Oswald-Medium.ttf') format('truetype');
+font-family: Oswald;
+src: url('../font/Oswald/Oswald-Medium.ttf') format('truetype');
 }
-
 @font-face {
-  font-family: Montserrat-500;
-  src: url('../font/Montserrat/Montserrat-Medium.ttf') format('truetype');
+font-family: Montserrat-500;
+src: url('../font/Montserrat/Montserrat-Medium.ttf') format('truetype');
 }
-
 @font-face {
-  font-family: Montserrat-400;
-  src: url('../font/Montserrat/Montserrat-Regular.ttf') format('truetype');
+font-family: Montserrat-400;
+src: url('../font/Montserrat/Montserrat-Regular.ttf') format('truetype');
 }
 
 /* https://piccalil.li/blog/a-modern-css-reset */
-
-*,
-*::before,
-*::after {
-box-sizing: border-box;
-}
+*,*::before,*::after {box-sizing: border-box;}
 
 * {
-  margin: 0;
-  padding: 0;
-  font: inherit;
-  color: black;
+margin: 0;
+padding: 0;
+font: inherit;
+color: black;
 }
 
-html:focus-within {
-  scroll-behavior: smooth;
-}
+html:focus-within {scroll-behavior: smooth;}
 
-html,
-body {
-  height: 100%;
-}
+html,body {height: 100%;}
 
 body {
-  width: 320px;  
-  height: 2970px;
-  margin: 0 auto;   
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  border: 1px solid red;
+margin: 0 auto;   
+text-rendering: optimizeSpeed;
+font-style: normal;
+line-height: normal;
 }
 
-main{
-  overflow: hidden;
-  max-height: 2970px;
-}
+main{overflow: hidden;}
 
-img,
-picture,
-svg {
-  display: block;
-}
+img,picture,svg {display: block;}
 
 @media (prefers-reduced-motion: reduce) {
 html:focus-within {
- scroll-behavior: auto;
+scroll-behavior: auto;
 }
-
 *,
 *::before,
 *::after {
-  animation-duration: 0.01ms !important;
-  animation-iteration-count: 1 !important;
-  transition-duration: 0.01ms !important;
-  scroll-behavior: auto !important;
+animation-duration: 0.01ms !important;
+animation-iteration-count: 1 !important;
+transition-duration: 0.01ms !important;
+scroll-behavior: auto !important;
 }
 }
+
+li,ol,ul {list-style-type: none;}
 
 a {
-  text-decoration-skip-ink: auto;
-  text-decoration: none;
-  cursor: pointer;
+text-decoration-skip-ink: auto;
+text-decoration: none;
+cursor: pointer;
 }
 
-li,
-ol,
-ul {
-  list-style-type: none;    
-}
-
-button {
-  cursor: pointer;
-}
+button {cursor: pointer;}
 
 /* Utility Classes*/
 
-.display-flex{display: flex;}
-.display-inline{display: inline;}
-
-.position-absolute{position: absolute;}
-.position-relative{position: relative;}
+#whitespace{color: white;}
 
 .clr-primary{color: var(--clr-primary);}
+.clr-footer{color: var(--clr-footer);}
+.clr-button{color: var(--clr-button);}
 
 .text-oswald{font-family: var(--ff-oswald);}
 .text-montserrat-500{font-family: var(--ff-montserrat-500);}
@@ -129,395 +99,482 @@ button {
 .text-500{font-weight: 500;}
 
 .button{
-  border: none;
-  border-radius: 2rem;
-  color: white;
-  font-size: 18px;
-  font-style: normal;
-  line-height: normal; 
+border: none;
+border-radius: 2rem;
+color: var(--clr-button);
 }
 
-#whitespace{
-  color: white;
+/* General Styles */
+
+.header-top,
+.name-email-group,
+.form-checkbox,
+.logos-group,
+.icons-group,
+.images {
+  display: flex;
 }
 
-/* Disabled elements */
-
-.primary-navbar{display: none;}
-
-/* CSS */
-
-.top-union{
-  min-width: 320px;
-  min-height: 59px;
-  background: url("../img/mobile/header-top.svg") center/cover no-repeat;
+.top-union,
+.exit-icon,
+.menu-icon,
+.play-icon,
+.cover-top,
+.cover-bottom,
+.logos-title,
+.logos,
+.teikums-logo,
+.sem-logo,
+.citybee-logo,
+.linearis-logo,
+.footer-logo,
+.info-name,
+.info-group,
+.icons,
+.footer-text,
+.policy,
+.navbar-footer,
+.view-requsites,
+.requsites {
+  position: absolute;
 }
 
-.header-logo{
-  min-width: 78px;
-  min-height: 49px;
-  margin-left: 1.2rem;
+.header-top,
+.video-img,
+.images-sect .container,
+.logos-sect .container,
+.footer .container,
+.footer-bg {
+  position: relative;
+}
+
+.header-logo {
   z-index: 1;
-  background: url("../img/mobile/BlackLogo.png") no-repeat;
 }
 
-.exit-icon{
-  width: 15px;
-  height: 15px;
-  z-index: 1;
-  right: 19px;
-  top: 17px;
-  background: url("../img/mobile/exit.svg")
-}
-
-.video-img{
-  min-width: 320px;
-  min-height: 169px;
+.video-img {
   z-index: -1;
-  background: url("../img/SparkleVideo.jpg") center/cover no-repeat;
-}
-
-.play-icon{
-  min-width: 70px;
-  min-height: 70px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: url("../img/Play.svg") center/cover no-repeat;
-}
-
-.text .container{
-  text-align: center;
-  max-width: 280px;
-  max-height: 124px;
-  margin: 0 auto;
-  margin-top: 5rem;
-  margin-bottom: 5.25rem;
-}
-
-.text-content {
-  font-size: 12px;
-  font-style: normal;
-  line-height: normal;
-}
-
-.images-sect .container{
-  margin-bottom: 7.5rem;
-}
-
-.cover-top {
-  min-width: 320px;
-  min-height: 24px;
-  top: 0;
-  background: url("../img/mobile/images-top.svg") center/cover no-repeat;
-}
-
-.cover-bottom {
-  min-width: 320px;
-  min-height: 25px;
-  bottom: 0;
-  background: url("../img/mobile/images-bottom.svg") center/cover no-repeat;
 }
 
 .images {
-  min-width: 320px;
-  display: flex;
-  flex-wrap: wrap;
+  align-items: end;
 }
 
-.Brinuma_meita-15 {
-  min-width: 136px;
-  min-height: 82px;
-  background: url("../img/Brinuma-meita.jpg") center/cover no-repeat;
+.cover-top{
+  top: 0;
 }
 
-.Alina_11 {
-  min-width: 136px;
-  min-height: 85px;
-  background: url("../img/Alina.jpg") center/cover no-repeat;
+.cover-bottom {
+  bottom: 0;
 }
 
-.img-group{
-  align-self: end;
-  order: 1;
+.btn-group h3,
+.form-title,
+.form-group {
+  margin: 0 auto;
 }
 
-.Anda2-1 {
-  min-width: 184px;
-  min-height: 174px;
-  order: 2;
-  background: url("../img/Anda.jpg") center/cover no-repeat;
+.form-sect .container {
+  text-align: center;
 }
 
-.Zanda-1{
-  min-width: 168px;
-  min-height: 183px;
-  order: 3;
-  background: url("../img/Zanda.jpg") center/cover no-repeat;
+.form-group #comment {
+  resize: none;
 }
 
-.Sibilia-4{
-  min-width: 167px;
-  min-height: 183px;
-  margin-right: -1rem;
-  order: 4;
-  background: url("../img/Sibilla.jpg") center/cover no-repeat;
+.form-group .mandatory,
+.form-group .terms-container {
+  text-align: start;
 }
 
-.buttons-sect .container{
+.footer p,
+.footer a {
+  color: var(--clr-footer);
+}
+
+.view-requsites {
+  font-weight: 700;
+}
+
+.info-group {
+  text-align: end;
+}
+
+.facebook,
+.instagram {
+  cursor: pointer;
+}
+
+.text .container {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.buttons-sect .container {
   text-align: center;
   align-items: center;
-  margin-bottom: 7.35rem;
 }
 
-.first-group{
-  margin-bottom: 5rem;
-}
-
-.btn-group h3{
-  font-size: 18px;
-  margin: 0 auto;
-  margin-bottom: 1.9rem;
-}.first-btn-title{
-  max-width: 394px;
-  min-height: 29px;
-}.second-btn-title{
-  max-width: 280px;
-  min-height: 55px;
-}
-
-.buttons-sect-btn{
-  min-width: 233px;
-  min-height: 50px;
-}
-
-
-
-.form-sect .container{
-  text-align: center;
-}
-
-.form-title{
-  min-width: 280px;
-  min-height: 35px;
-  font-size: 24px;
-  margin: 0 auto;
-  margin-bottom: 1.8rem;
-}
-
-.form-container{
-  margin: 0 auto;
-  max-width: 280px;
-  margin-bottom: 7.75rem;
-}
-
-.form-container form input, .form-sect form textarea{
+.form-group form input,
+.form-group form textarea {
   background-color: var(--bg-form);
   color: var(--clr-primary);
-  min-width: 280px;
-  min-height: 35px;
-  font-size: 14px;
   letter-spacing: -0.21px;
   border-radius: 6px;
   border: none;
-  margin-bottom: 10px;
-  padding-left: .65rem;
 }
 
-.form-container .name-emails-group{
-  display: grid;
-}
-  
-.form-container #comment{
-  min-width: 280px;
-  height: 150px;
-  margin-bottom: .1rem;
-  padding-top: .4rem;
-  resize: none;
-}
-  
-.form-container .mandatory {
-  text-align: start;
-  min-width: 280px;
-  min-height: 18px; 
-  font-size: 12px;
-  margin-bottom: .5rem;
-}
-  
-.form-container #check-box{
+.form-group #check-box {
   min-width: 16px;
   min-height: 16px;
-  border-radius: 3px;
   accent-color: var(--bg-form);
-  margin-right: 1.35rem;
+  border-radius: 3px;
+}
+
+.play-icon {
+  transform: translate(-50%, -50%);
+  left: 50%;
 }
   
-.form-container .terms-container{
-  text-align: start;
-  font-size: 12px;
-  line-height: 1.2;
-  padding-top: .25rem;
-}
+/* Stylesheet */
+
+@media only screen and (max-width: 320px) {
   
-.submit-btn{
-  min-width: 140px;
-  min-height: 48px;
-  margin-top: 3.45rem;
+  body{
+    width: 320px;  
+    height: 2970px;
+  }
+  main{
+    min-width: 320px;  
+  }
+  
+
+  .primary-navbar{display: none;}
+  .exit-icon{
+    width: 15px;
+    height: 15px;
+    z-index: 1;
+    right: 20px;
+    top: 18px;
+    background: url("../img/mobile/exit.svg") center/cover no-repeat;
+  }
+
+
+  .top-union{
+    min-width: 320px;
+    min-height: 59px;
+    background: url("../img/mobile/header-top.svg") center/cover no-repeat;
+  }
+  
+  .header-logo{
+    min-width: 78px;
+    min-height: 49px;
+    margin-left: 1.25rem;
+    background: url("../img/mobile/BlackLogo.png") center/cover no-repeat;
+  }
+  
+  .video-img{
+    min-width: 320px;
+    min-height: 169px;
+    background: url("../img/SparkleVideo.jpg") center/cover no-repeat;
+  }
+  
+  .play-icon{
+    min-width: 70px;
+    min-height: 70px;
+    top: 52%;
+    background: url("../img/Play.svg") center/cover no-repeat;
+  }
+  
+  .text .container{
+    max-width: 280px;
+    margin-top: 5rem;
+    margin-bottom: 5.25rem;
+  }
+  
+  .text-content {
+    font-size: 12px;
+  }
+  
+  .images-sect .container{
+    margin-bottom: 7.5rem;
+  }
+  
+  .cover-top {
+    min-width: 320px;
+    min-height: 24px;
+    background: url("../img/mobile/images-top.svg") center/cover no-repeat;
+  }
+  
+  .cover-bottom {
+    min-width: 320px;
+    min-height: 25px;
+    background: url("../img/mobile/images-bottom.svg") center/cover no-repeat;
+  }
+  
+  .images {
+    min-width: 320px;
+    flex-wrap: wrap;
+  }
+  
+  .brinuma-meita-img {
+    min-width: 136px;
+    min-height: 82px;
+    background: url("../img/Brinuma-meita.jpg") center/cover no-repeat;
+  }
+  
+  .alina-img {
+    min-width: 136px;
+    min-height: 85px;
+    background: url("../img/Alina.jpg") center/cover no-repeat;
+  }
+  
+  .img-group{
+    order: 1;
+  }
+  
+  .anda-img {
+    min-width: 184px;
+    min-height: 174px;
+    order: 2;
+    background: url("../img/Anda.jpg") center/cover no-repeat;
+  }
+  
+  .zanda-img{
+    min-width: 168px;
+    min-height: 183px;
+    order: 3;
+    background: url("../img/Zanda.jpg") center/cover no-repeat;
+  }
+  
+  .sibilia-img{
+    min-width: 167px;
+    min-height: 183px;
+    margin-right: -1rem;
+    order: 4;
+    background: url("../img/Sibilla.jpg") center/cover no-repeat;
+  }
+  
+  .buttons-sect .container{
+    margin-bottom: 7.4rem;
+  }
+  
+  .first-group{
+    margin-bottom: 5rem;
+  }
+  
+  .btn-group h3{
+    font-size: 18px;
+    margin-bottom: 1.9rem;
+  }.first-btn-title{
+    max-width: 394px;
+    min-height: 29px;
+  }.second-btn-title{
+    max-width: 280px;
+    min-height: 55px;
+  }
+  
+  .buttons-sect-btn{
+    font-size: 18px;
+    min-width: 233px;
+    min-height: 50px;
+  }
+  
+  .form-title{
+    min-width: 280px;
+    min-height: 35px;
+    font-size: 24px;
+    margin-bottom: 1.8rem;
+  }
+  
+  .form-group{
+    max-width: 280px;
+  }
+  
+  .form-group form input, .form-group form textarea{
+    min-width: 280px;
+    min-height: 35px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding-left: .7rem;
+  }
+  
+  .form-group .name-email-group{
+    display: grid;
+  }
+    
+  .form-group #name-surname{
+    padding-top: .2rem;
+  }
+
+  .form-group #email{
+    padding-top: .253rem;
+  }
+
+  .form-group #phone{
+    padding-top: .2rem;
+  }
+
+  .form-group #comment{
+    min-width: 280px;
+    max-height: 150px;
+    margin-bottom: .35rem;
+    padding-top: .6rem;
+  }
+    
+  .form-group .mandatory {
+    min-width: 280px;
+    min-height: 18px; 
+    font-size: 12px;
+    margin-bottom: .5rem;
+  }
+    
+  .form-group .terms-container{
+    font-size: 12px;
+    line-height: 1.25;
+    padding-top: .25rem;
+  }
+    
+  .form-group #check-box{
+    margin-right: 1.3rem;
+    margin-top: .15rem;
+  }
+
+  .submit-btn{
+    min-width: 140px;
+    min-height: 48px;
+    font-size: 18px;
+    margin-top: 3.35rem;
+  }
+  
+  .logos-sect .container{
+    margin-top: 7.6rem;
+    margin-bottom: -21.25rem;
+  }
+
+  .logo-bg{
+    min-width: 322px;
+    min-height: 732px;
+    background: url("../img/mobile/footer-top.svg") center/cover no-repeat;
+  }
+  
+  .logos-title {
+    font-size: 24px;
+    left: 6.1rem;
+    top: 5rem;
+  }
+  
+  .teikums-logo{
+      min-width: 130px;
+      min-height: 44px;
+      top: 11.15rem;
+      left: 1.25rem;
+      background: url("../img/Teikums-logo.svg") center/cover no-repeat;
+  }
+  
+  .sem-logo{
+      min-width: 135px;
+      min-height: 51px;
+      top: 10.85rem;
+      left: 10.4rem;
+      background: url("../img/Sem-logo.svg") center/cover no-repeat;
+  }
+  
+  .citybee-logo{
+      min-width: 131px;
+      min-height: 44px;
+      top: 16.5rem;
+      left: 1.25rem;
+      background: url("../img/Citybee-logo.svg") center/cover no-repeat;
+  }
+  
+  .linearis-logo{
+      min-width: 48px;
+      min-height: 67px;
+      top: 16.1rem;
+      left: 13.1rem;
+      background: url("../img/Linearis-logo.svg") center/cover no-repeat;
+  }
+  
+  .footer-bg{
+    min-width: 320px;
+    min-height: 483px;
+    background: url("../img/mobile/footer-bottom.svg") center/cover no-repeat;
+  }
+  
+  .footer-logo{
+    min-width: 100px;
+    min-height: 100px; 
+    top: 2.7rem; 
+    left: 1.2rem;
+    background: url("../img/GoldenLogo.png") center/cover no-repeat;
+  }
+  
+  .info-group{
+    font-size: 12px;
+    top: 222px;
+    left: 20px;
+    text-align: start;
+  }.info-group p:nth-child(1), 
+   .info-group p:nth-child(2) {
+    padding-bottom: .75rem;
+  }
+  
+  .info-name{
+    font-size: 18px;
+    left: 20px;
+    top: 169px;
+  }
+  
+  .view-requsites{
+    font-size: 14px;
+    font-weight: 700;
+    min-width: 220px;
+    min-height: 21px;
+    bottom: 162px;
+    left: 21px;
+    letter-spacing: .02rem;
+  }
+  
+  .icons{
+    bottom: 102px;
+    left: 20px;
+  }.facebook{
+    min-width: 12.5px;
+    min-height: 25px;
+    margin-right: 2.1rem;
+    background: url("../img/facebook.svg") center/cover no-repeat;
+  }.instagram{
+    min-width: 25px;
+    min-height: 25px;
+    background: url("../img/instagram.svg") center/cover no-repeat;
+  }
+  
+  .footer-text{
+    font-size: 11px;
+    bottom: 53.5px;
+    left: 20px;
+  }
+  
+  .policy{
+    font-size: 11px;
+    bottom: 32.5px;
+    left: 20px;
+  }
 }
 
-
-
-.logo-bg{
-  min-width: 322px;
-  min-height: 732px;
-  z-index: -1;
-  margin-bottom: -21.25rem;
-  background: url("../img/mobile/footer-top.svg") center/cover no-repeat;
-}
-
-.logos-title {
-  font-size: 24px;
-  left: 6.1rem;
-  top: 5rem;
-}
-
-.getlogo{
-    min-width: 130px;
-    min-height: 44px;
-    top: 11.25rem;
-    left: 1.25rem;
-    background: url("../img/Teikums-logo.svg") center/cover no-repeat;
-}
-
-.sem_logo{
-    min-width: 135px;
-    min-height: 51px;
-    top: 11rem;
-    left: 10.375rem;
-    background: url("../img/Sem-logo.svg") center/cover no-repeat;
-}
-
-.Citybee{
-    min-width: 131px;
-    min-height: 44px;
-    top: 16.5rem;
-    left: 1.25rem;
-    background: url("../img/Citybee-logo.svg") center/cover no-repeat;
-}
-
-.logo1{
-    min-width: 48px;
-    min-height: 67px;
-    top: 16.1rem;
-    left: 13.1rem;
-    background: url("../img/Linearis-logo.svg") center/cover no-repeat;
-}
-
-
-
-footer .container p, footer .container a{
-  color: #FFF;
-  font-style: normal;
-  line-height: normal;
-}
-
-.footer-bg{
-  min-width: 320px;
-  min-height: 483px;
-  background: url("../img/mobile/footer-bottom.svg");
-}
-
-.footer-logo{
-  min-width: 100px;
-  min-height: 100px; 
-  top: 2.7rem; 
-  left: 1.2rem;
-  background: url("../img/GoldenLogo.png") center/cover no-repeat;
-}
-
-.info-container{
-  font-size: 12px;
-  top: 221px;
-  left: 20px;
-  text-align: start;
-}.info-container p:nth-last-child(-n+3) {
-  padding-bottom: .65rem;
-}
-
-.info-name{
-  position: absolute;
-  font-size: 18px;
-  left: 20px;
-  top: 169px;
-}
-
-.view-requsites{
-  font-size: 14px;
-  font-weight: 700;
-  min-width: 220px;
-  min-height: 21px;
-  bottom: 162px;
-  left: 21px;
-}
-
-.icons{
-  bottom: 103px;
-  left: 20px;
-  cursor: pointer;
-}.facebook{
-  min-width: 12.5px;
-  min-height: 25px;
-  margin-right: 2.1rem;
-  background: url("../img/facebook.svg") center/cover no-repeat;
-}.instagram{
-  min-width: 25px;
-  min-height: 25px;
-  background: url("../img/instagram.svg") center/cover no-repeat;
-}
-
-.footer-logo-text{
-  font-size: 11px;
-  bottom: 53.5px;
-  left: 20px;
-}
-
-.policy{
-  font-size: 11px;
-  bottom: 32.5px;
-  left: 20px;
-}
-
-@media screen and (min-width: 320.1px) {
+@media only screen and (min-width: 321px) and (max-width: 768px) {
   
   body {
     width: 768px;
     height: 3021px;
   }
-
   main{
-    max-height: 3021px;
+    min-width: 768px;
   }
-
-  /* Disabled elements */
 
   .primary-navbar{display: none;}
   .exit-icon{display: none;}
-
-  /* CSS */
-
-  .top-union{
-    width: 768px;
-    height: 96px;
-    background: url("../img/tablet/header-top.svg") center/cover no-repeat;
-  }
-
-  .header-logo{
-    width: 128px;
-    height: 118px;
-    margin-left: 4.95rem;
-    background: url("../img/tablet/BlackLogo.png") no-repeat;
-  }
-
   .menu-icon{
     width: 24.8px;
     height: 20px;
@@ -525,72 +582,79 @@ footer .container p, footer .container a{
     right: 79px;
     top: 35px;
     cursor: pointer;
-    background: url("../img/tablet/menu.svg");
+    background: url("../img/tablet/menu.svg") center/cover no-repeat;
   }
 
 
+  .top-union{
+    min-width: 768px;
+    min-height: 96px;
+    background: url("../img/tablet/header-top.svg") center/cover no-repeat;
+  }
+
+  .header-logo{
+    min-width: 128px;
+    min-height: 118px;
+    margin-left: 4.95rem;
+    background: url("../img/tablet/BlackLogo.png") no-repeat;
+  }
 
   .video-img{
-    width: 768px;
-    height: 406px;
+    min-width: 768px;
+    min-height: 406px;
     margin-top: -3rem;
     background: url("../img/SparkleVideo.jpg") center/cover no-repeat;
   }
 
   .play-icon{
-    width: 120px;
-    height: 120px;
+    min-width: 120px;
+    min-height: 120px;
     top: 51%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background: url("../img/Play.svg") center/cover no-repeat;
   }
 
-
-
   .text .container{
     max-width: 608px;
-    max-height: 140px;
+    min-height: 140px;
     margin-top: 9.65rem;
-    margin-bottom: 9.5rem;
+    margin-bottom: 9rem;
   }
 
   .text-content {
     font-size: 18px;
   }
 
-
-
   .images-sect .container{
     margin-bottom: 7.5rem;
   }
 
   .cover-top {
-    width: 768px;
-    height: 31px;
+    min-width: 768px;
+    min-height: 31px;
+    top: 2px;
     background: url("../img/tablet/images-top.svg") center/cover no-repeat;
   }
 
   .cover-bottom {
-    width: 768px;
-    height: 31px;
+    min-width: 768px;
+    min-height: 31px;
     bottom: -9px;
     background: url("../img/tablet/images-bottom.svg") center/cover no-repeat;
   }
 
   .images {
-    width: 768px;
+    min-width: 768px;
   }
 
-  .Brinuma_meita-15 {
-    width: 167px;
-    height: 102px;
+  .brinuma-meita-img {
+    min-width: 167px;
+    min-height: 102px;
     background: url("../img/Brinuma-meita.jpg") center/cover no-repeat;
   }
 
-  .Alina_11 {
-    width: 167px;
-    height: 104px;
+  .alina-img {
+    min-width: 167px;
+    min-height: 104px;
     background: url("../img/Alina.jpg") center/cover no-repeat;
   }
 
@@ -598,31 +662,29 @@ footer .container p, footer .container a{
     order: 3;
   }
 
-  .Anda2-1 {
-    width: 229px;
-    height: 216px;
+  .anda-img {
+    min-width: 229px;
+    min-height: 216px;
     order: 4;
     background: url("../img/Anda.jpg") center/cover no-repeat;
   }
 
-  .Zanda-1{
-    width: 184px;
-    height: 200px;
+  .zanda-img{
+    min-width: 184px;
+    min-height: 200px;
     order: 1;
-    margin-top: .75rem;
+    margin-bottom: .55rem;
     background: url("../img/Zanda.jpg") center/cover no-repeat;
   }
 
-  .Sibilia-4{
-    width: 188px;
-    height: 206px;
+  .sibilia-img{
+    min-width: 188px;
+    min-height: 206px;
     order: 2;
     margin: 0;
     margin-top: .75rem;
     background: url("../img/Sibilla.jpg") center/cover no-repeat;
   }
-
-
 
   .buttons-sect .container{
     align-items: end;
@@ -634,7 +696,6 @@ footer .container p, footer .container a{
   }
 
   .first-group{
-    margin: 0;
     order: 2;
   }
   
@@ -643,6 +704,7 @@ footer .container p, footer .container a{
   }
 
   .btn-group h3{
+    font-size: 18px;
     margin-bottom: 3rem;
   }.first-btn-title{
     max-width: 233px;
@@ -653,125 +715,137 @@ footer .container p, footer .container a{
   }
 
   .buttons-sect-btn{
-    width: 233px;
-    height: 50px;
+    font-size: 18px;
+    min-width: 233px;
+    min-height: 50px;
   }
-
-
 
   .form-title{
-    width: 280px;
-    height: 35px;
+    min-width: 280px;
+    min-height: 35px;
     font-size: 30px;
-    margin-bottom: 4rem;
+    margin-bottom: 3.5rem;
   }
 
-  .form-container{
+  .form-group{
     max-width: 608px;
-    margin-bottom: 7.5rem;
+    margin-bottom: 8rem;
   }
 
-  .form-sect form input, .form-sect form textarea{
+  .form-group form input, .form-group form textarea{
     font-size: 18px;
+    min-width: 294px;
+    min-height: 40px;
+    margin-bottom: 1rem;
   }
 
-  .form-container .name-emails-group{
+  .form-group .name-email-group{
     display: flex;
     justify-content: space-between;
-    margin-bottom: .4rem;
-  }.form-container .name-emails-group > * {
-    width: 294px;
-    height: 40px;
   }
    
-  .form-container #phone{
-    width: 608px;
-    height: 40px;
+  .form-group #name-surname{
+    padding-top: .2rem;
+    padding-left: .7rem;
+  }
+
+  .form-group #email{
+    padding-top: .253rem;
+    padding-left: .75rem;
+  }
+
+  .form-group #phone{
+    min-width: 608px;
     margin-bottom: .9rem;
+    padding-top: .2rem;
+    padding-left: .7rem;
   }
   
-  .form-container #comment{
-    width: 608px;
-    height: 230px;
-    margin-bottom: .55rem;
+  .form-group #comment{
+    min-width: 608px;
+    max-height: 230px;
+    margin-bottom: .75rem;
+    padding-top: .7rem;
+    padding-left: .8rem;
   }
     
-  .form-container .mandatory {
-    width: 608px;
-    height: 19px;
+  .form-group .mandatory {
+    min-width: 608px;
+    min-height: 19px;
     font-size: 14px;
+    margin-bottom: .5rem;
   }
     
-  .form-container .terms-container{
-    display: block;
-    width: 568px;
-    height: 39px;
+  .form-group .terms-container{
     font-size: 13.7px;
-    padding-left: .25rem;
+    line-height: 1.3;
+    padding-top: .2rem;
+    padding-left: .4rem;
+  }
+
+  .form-group #check-box{
+    margin-right: 1.2rem;
   }
     
   .submit-btn{
-    width: 182px;
-    height: 62px;
+    min-width: 182px;
+    min-height: 62px;
     font-size: 24px;
-    margin-top: 3.3rem;
+    margin-top: 3.2rem;
   }
 
-
+  .logos-sect .container{
+    margin-top: 9.35rem;
+    margin-bottom: -1.1rem;
+  }
 
   .logo-bg{
-    width: 768px;
+    min-width: 768px;
     min-height: 270px;
-    margin-top: 1.85rem;
-    margin-bottom: -1.15rem;
     background: url("../img/tablet/footer-top.svg") center/cover no-repeat;
   }
 
   .logos-title {
-    width: 222px;
-    height: 34px;
+    font-size: 24px;
     left: 20.1rem;
-    top: 5.35rem;
+    top: 3.5rem;
   }
 
-  .getlogo{
+  .teikums-logo{
     min-width: 144px;
     min-height: 47px;
-    top: 9.75rem;
+    top: 7.9rem;
     left: 5rem;
     background: url("../img/Teikums-logo.svg") center/cover no-repeat;
   }
 
-  .sem_logo{
-      min-width: 123px;
-      min-height: 47px;
-      top: 9.75rem;
-      left: 17rem;
-      background: url("../img/Sem-logo.svg") center/cover no-repeat;
+  .sem-logo{
+    min-width: 123px;
+    min-height: 47px;
+    top: 7.9rem;
+    left: 17.1rem;
+    background: url("../img/Sem-logo.svg") center/cover no-repeat;
   }
 
-  .Citybee{
-      min-width: 142px;
-      min-height: 47px;
-      top: 9.75rem;
-      left: 27.9rem;
-      background: url("../img/Citybee-logo.svg") center/cover no-repeat;
+  .citybee-logo{
+    min-width: 142px;
+    min-height: 47px;
+    top: 7.9rem;
+    left: 27.9rem;
+    background: url("../img/Citybee-logo.svg") center/cover no-repeat;
   }
 
-  .logo1{
-      min-width: 49px;
-      min-height: 71px;
-      top: 9.15rem;
-      left: 39.9rem;
-      background: url("../img/Linearis-logo.svg") center/cover no-repeat;
+  .linearis-logo{
+    min-width: 49px;
+    min-height: 71px;
+    top: 7.3rem;
+    left: 39.9rem;
+    background: url("../img/Linearis-logo.svg") center/cover no-repeat;
   }
-
-
 
   .footer-bg{
-    width: 768px;
+    min-width: 768px;
     min-height: 393px;
-    margin: 0;
     background: url("../img/tablet/footer-bottom.svg") center/cover no-repeat;
   }
 
@@ -783,39 +857,44 @@ footer .container p, footer .container a{
     background: url("../img/GoldenLogo.png") center/cover no-repeat;
   }
 
-  .info-container{
+  .info-group{
     font-size: 18px;
     top: 115px;
     right: 80px;
-    left: unset;
-    text-align: end;
+  }.info-group p:nth-child(1){
+    padding-bottom: .75rem;
+  }.info-group p:nth-child(2){
+    padding-bottom: .5rem;
   }
 
   .info-name{
     font-size: 24px;
     left: 80px;
     bottom: 100px;
-    top: unset;
   }
 
   .view-requsites{
     font-size: 18px;
     bottom: 160px;
-    right: 10px;
-    left: unset;
+    right: 80px;
+    letter-spacing: .02rem;
   }
 
   .icons{
     bottom: 100px;
     right: 80px;
-    left: unset;
   }.facebook{
+    min-width: 12.5px;
+    min-height: 25px;
+    margin-right: 2.1rem;
     background: url("../img/facebook.svg") center/cover no-repeat;
   }.instagram{
+    min-width: 25px;
+    min-height: 25px;
     background: url("../img/instagram.svg") center/cover no-repeat;
   }
 
-  .footer-logo-text{
+  .footer-text{
     font-size: 16px;
     bottom: 45px;
     left: 79.5px;
@@ -825,391 +904,380 @@ footer .container p, footer .container a{
     font-size: 16px;
     bottom: 45px;
     right: 80px;
-    left: unset;
   }
 
 }
-/*
-@media screen and (min-width: 768.1px) {
+
+@media only screen and (min-width: 769px) {
 
   body {
     width: 1366px;  
     height: 3651px;
   }
-
-  /* Disabled elements 
+  main{
+    min-width: 1366px;
+  }
 
   .view-requsites{display: none;}
   .exit-icon{display: none;}
-
-  /* CSS 
-
-  .top-union {
-    width: 85.375rem;
-    height: 7.5rem;
-    z-index: -1;
-    background: url("../img/desktop/Union.svg");
-    }
-    
-  .header-top{
-    z-index: 1;
-    top: 0;
-  }
-    
-  .header-logo{
-    width: 159px;
-    height: 95px;
-    margin-left: 3.9rem;
-    margin-right: 5.25rem;
-    background: url("../img/desktop/BlackLogo3.jpg");
-  }
-    
+  .menu-icon{display: none;}
   .primary-navbar{
     display: flex;
     font-size: 18px;
-    font-style: normal;
-    line-height: normal;  
     padding-top: 3.2rem;
+    z-index: 1;
+  }.primary-navbar li:nth-child(1){
+    margin-right: 35px;
+  }.primary-navbar li:nth-child(2){
+    margin-right: 36px;
+  }.primary-navbar li:nth-child(3){
+    margin-right: 40px;
+  }.primary-navbar li:nth-child(4){
+    margin-right: 38px;
+  }.primary-navbar li:nth-child(5){
+    margin-right: 34px;
+  }.primary-navbar li:nth-child(6){
+    margin-right: 62px;
+  }
+
+
+  .top-union {
+    min-width: 85.375rem;
+    min-height: 7.5rem;
+    top: 5px;
+    background: url("../img/header-top.svg") center/cover no-repeat;
+  }
+    
+  .header-top{
+    top: 0;
+  }
+  
+  .header-logo{
+    min-width: 159px;
+    min-height: 95px;
+    margin-left: 3.9rem;
+    margin-right: 5.25rem;
+    background: url("../img/BlackLogo.jpg") center/cover no-repeat;
   }
     
   .video-img{
-    margin-top: -3rem;
+    min-width: 1366px;
     min-height: 722px;
-    background: url("../img/desktop/Sparkle_Video_1.png");
+    margin-top: -3rem;
+    background: url("../img/SparkleVideo.jpg") center/cover no-repeat;
   }
     
   .play-icon {
-    top: 49.5%;
-    left: 49.5%;
-    transform: translate(-50%, -50%);
-    min-width: 110px;
-    min-height: 110px;
-    background: url("../img/desktop/Group2.svg");
+    min-width: 120px;
+    min-height: 124px;
+    top: 50.5%;
+    background: url("../img/Play.svg") center/cover no-repeat;
   }
     
   .text .container{
-    margin: 0 auto;
-    text-align: center;
+    max-width: 654px;
     margin-top: 9.325rem;
     margin-bottom: 9.6rem;
-    max-width: 654px;
-    max-height: 114px;
   }
     
   .text-content{
     font-size: 18px;
-    font-style: normal; 
-    line-height: normal;
   }
     
   .images-sect .container{
     margin-bottom: 10.4rem;
   }
     
-  .images {
-    width: 1366px;
-    align-items: end;
-    display: flex;
-  }
-    
   .cover-top {
-    width: 1366px;
-    height: 55px;
+    min-width: 1366px;
+    min-height: 55px;
     top: 0;
-    background: url("../img/desktop/ripped67.svg");
+    background: url("../img/images-top.svg") center/cover no-repeat;
   }
     
   .cover-bottom {
-    width: 1366px;
-    height: 55px;
+    min-width: 1366px;
+    min-height: 55px;
     bottom: -15px;
-    background: url("../img/desktop/ripped68.svg");
+    background: url("../img/images-bottom.svg") center/cover no-repeat;
+  }
+
+  .images {
+    min-width: 1366px;
   }
     
-  .Brinuma_meita-15 {
-    width: 298px;
-    height: 180px;
-    background: url("../img/desktop/Brinuma_meita-15.jpg");
+  .brinuma-meita-img {
+    min-width: 298px;
+    min-height: 180px;
+    background: url("../img/Brinuma-meita.jpg") center/cover no-repeat;
   }
     
-  .Alina_11 {
-    width: 298px;
-    height: 184px;
-    background: url("../img/desktop/Alina_11.jpg");
+  .alina-img {
+    min-width: 298px;
+    min-height: 184px;
+    background: url("../img/Alina.jpg") center/cover no-repeat;
   }
     
   .img-group{
     order: 3;
   }
     
-  .Anda2-1 {
-    width: 406px;
-    height: 383px;
+  .anda-img {
+    min-width: 406px;
+    min-height: 383px;
     order: 4;
-    background: url("../img/desktop/Anda_21.jpg");
+    background: url("../img/Anda.jpg") center/cover no-repeat;
   }
     
-  .Zanda-1{
-    width: 328px;
-    height: 355px;
+  .zanda-img{
+    min-width: 328px;
+    min-height: 355px;
     order: 1;
     margin-bottom: .8rem;
-    background: url("../img/desktop/Zanda_1.jpg");
+    background: url("../img/Zanda.jpg") center/cover no-repeat;
   }
     
-  .Sibilia-4{
-    width: 334px;
-    height: 364px;
+  .sibilia-img{
+    min-width: 334px;
+    min-height: 364px;
     order: 2;
-    background: url("../img/desktop/Sibilla_4.jpg");
+    background: url("../img/Sibilla.jpg") center/cover no-repeat;
   }
     
   .buttons-sect .container{
     display: flex;
     justify-content: center;
-    margin-bottom: 4.5rem;
+    margin-bottom: 9.45rem;
+  }
+
+  .first-group{
+    order: 1;
+  }
+
+  .second-group{
+    order: 2;
   }
     
   .btn-group{
     text-align: center;
     margin-left: 4.25rem;
     margin-right: 1rem;
-  }.btn-group h3{
+  }
+  
+  .btn-group h3{
     font-size: 24px;
     margin-bottom: 2.6rem;
-  }
-    
-  .first-btn-title{
+  }.first-btn-title{
     min-width: 394px;
     min-height: 29px;
-  }
-    
-  .second-btn-title{
+  }.second-btn-title{
     min-width: 500px;
     min-height: 29px;
   }
     
   .buttons-sect-btn{
-    width: 233px;
-    height: 50px;
+    font-size: 18px;
+    min-width: 233px;
+    min-height: 50px;
   }
     
-  .form-sect .container{
-    align-items: center;
-    text-align: center;
-  }
-    
-  .form-container{
-    margin: 0 auto;
-    margin-top: 3.5rem;
-    max-width: 612px;
-  }
-    
-  .name-emails-group{
-    display: flex;
-  }
-
   .form-title{
     font-size: 30px; 
-    font-style: normal; 
-    line-height: normal; 
+    margin-bottom: 3.5rem;
+  }
+
+  .form-group{
+    max-width: 612px;
+    margin-bottom: 9.45rem;
+  }
+    
+  .name-email-group{
+    display: flex;
   }
     
   .form-sect form input, .form-sect form textarea{
-    height: 43px; 
-    width: 296px; 
-    background-color: var(--bg-form);
-    color: var(--clr-primary);
     font-size: 18px; 
-    font-style: normal; 
-    line-height: normal; 
-    letter-spacing: -0.27px;
+    min-width: 296px;
+    min-height: 43px;
+    margin-bottom: 1rem;
     padding-top: .3rem;
     padding-left: .75rem;
-    margin-bottom: 1rem;
-    border-radius: .5rem;
-    border: none;
   }
     
-  .name-emails-group{
+  .form-group .name-email-group{
     justify-content: space-between;
   }
     
-  .form-sect #phone{
-    width: 612px; 
+  .form-group #phone{
+    min-width: 612px; 
   }
     
-  .form-sect #comment{
+  .form-group #comment{
     min-width: 612px;
-    min-height: 232px;
+    max-height: 232px;
+    margin-bottom: .9rem;
     padding-top: .6rem;
-    margin-bottom: .5rem;
-    resize: none;
   }
-    
-  .mandatory {
+
+  .form-group .mandatory {
     font-size: 14px;
-    font-style: normal;
-    line-height: normal;
-    text-align: start;
     margin-bottom: 1.87rem;
   }
     
-  #check-box{
-    width: 16px;
-    height: 16px;
-    border-radius: 3px;
-    accent-color: var(--bg-form);
-  }
-    
-  .terms-container{
-    width: 572px;
-    height: 39px;
-    padding-left: .1rem;
-    text-align: start;
-    line-height: 1;
-    }#terms{
+  .form-group .terms-container{
+    min-width: 572px;
+    min-height: 39px;
     font-size: 14px;
-    font-style: normal;
-    line-height: normal;
+    padding-left: .1rem;
+    padding-top: .1rem;
+  }
+
+  .form-group #check-box{
+    margin-right: 1.2rem;
+    margin-top: .3rem;
+    margin-left: .15rem;
   }
     
   .submit-btn{
-    width: 182px;
-    height: 62px;
+    min-width: 182px;
+    min-height: 62px;
     font-size: 24px;
-    margin-top: 3.3rem;
-    margin-bottom: 9.35rem;
+    margin-top: 3.2rem;
   }
     
+  .logos-sect .container{
+    margin-bottom: 15.75rem;
+  }
+
   .logo-bg{
     min-width: 1366px;
     min-height: 478px;
-    background: url("../img/desktop/Subtract.svg");
+    background: url("../img/footer-top.svg") center/cover no-repeat;
   }
 
   .logos-title{
     font-size: 24px;
-    top: 98px;
-    left: 620px;
+    top: 100px;
+    left: 621px;
   }
     
-  .getlogo{
-    width: 241.951px;
-    height: 80px;
+  .teikums-logo{
+    min-width: 241.951px;
+    min-height: 80px;
     top: 217px;
     left: 168px;
-    background: url("../img/desktop/getlogo1.svg");
+    background: url("../img/Teikums-logo.svg") center/cover no-repeat;
   }
     
-  .sem_logo{
-    width: 209.315px;
-    height: 80px;
+  .sem-logo{
+    min-width: 209.315px;
+    min-height: 80px;
     top: 217px;
     left: 495px;
-    background: url("../img/desktop/sem_logo-21.svg");
+    background: url("../img/Sem-logo.svg") center/cover no-repeat;
   }
     
-  .Citybee{
-    width: 238.961px;
-    height: 80px;
+  .citybee-logo{
+    min-width: 238.961px;
+    min-height: 80px;
     top: 217px;
     left: 788px;
-    background: url("../img/desktop/Citybee-logo1.svg");
+    background: url("../img/Citybee-logo.svg") center/cover no-repeat;
   }
     
-  .logo1{
-    width: 84.771px;
-    height: 120px;
+  .linearis-logo{
+    min-width: 84.771px;
+    min-height: 120px;
     top: 198px;
     left: 1112px;
-    background: url("../img/desktop/logo11.svg");
-  }
-    
-  footer .container p, footer .container a{
-    color: #FFF;
-    font-style: normal;
-    line-height: normal;
+    background: url("../img/Linearis-logo.svg") center/cover no-repeat;
   }
     
   .footer-bg{
-    width: 1366px;
-    height: 376px;  
+    min-width: 1366px;
+    min-height: 376px;  
     margin-top: -17.65rem;
-    background: url("../img/desktop/UnionFooter.svg");
+    background: url("../img/footer-bottom.svg") center/cover no-repeat;
   }
 
   .footer-logo{
-    width: 182px;
-    height: 182px;
-    top: 70px;
+    min-width: 182px;
+    min-height: 182px;
+    top: 72px;
     left: 61px;
-    background: url("../img/desktop/GoldenV2Logo3.png");
+    background: url("../img/GoldenLogo.png") center/cover no-repeat;
   }
     
-  .footer-logo-text{
-    width: 182px;
-    height: 38px;
+  .footer-text{
+    max-width: 182px;
+    max-height: 38px;
     font-size: 14px;
     bottom: 1rem;
     left: 61px;
   }
     
-  .navbar{
+  .navbar-footer{
     font-size: 18px;
-    font-style: normal;
-    line-height: normal;
-    top: 68px;
+    top: 72px;
     left: 23.8rem;
-  }.navbar-first-child{
-    padding-left: .2rem;
+  }.navbar-footer li:nth-child(1){
+    padding-left: .225rem;
+    padding-bottom: 1.275rem;
+  }.navbar-footer li:nth-child(2){
+    padding-bottom: 1.5rem;
+  }.navbar-footer li:nth-child(3){
+    padding-bottom: 1.3rem;
+  }.navbar-footer li:nth-child(4){
+    padding-bottom: 1.3rem;
+  }.navbar-footer li:nth-child(5){
+    padding-bottom: 1.35rem;
   }
     
   .requsites{
     font-size: 18px;
     top: 4.25rem;
     left: 40.15rem;
-  }.requsites-title{
+  }.requsites p:nth-child(1){
     font-size: 24px;
+    padding-bottom: 1.15rem;
+  }.requsites p:nth-child(2){
+    padding-bottom: .85rem;
+  }.requsites p:nth-child(3){
+    padding-bottom: .5rem;
   }
-    
+
   .info-name{
     font-size: 24px;
-    top: 4.35rem;
-    left: auto;
-    right: 65px;
+    top: 4.4rem;
+    right: 62.5px;
   }
     
-  .info-container{
+  .info-group{
     font-size: 18px;
-    text-align: end;
-    top: 7rem;
+    top: 7.175rem;
     right: 4rem;
-  }.info-container p{
-    padding-bottom: .65rem;
+  }.info-group p{
+    padding-bottom: .7rem;
   }
     
   .icons{
     bottom: 5.35rem;
     right: 3.85rem;
-    left: auto;
   }.facebook{
-    width: 18px;
-    height: 36px;
-    margin: 0;
-    background: url("../img/desktop/facebook.svg");
+    min-width: 18px;
+    min-height: 36px;
+    background: url("../img/facebook.svg") center/cover no-repeat;
   }.instagram{
-    width: 36px;
-    height: 36px;
-    margin-left: 1.9rem;
-    background: url("../img/desktop/instagram.svg");
+    min-width: 36px;
+    min-height: 36px;
+    margin-left: 1.8rem;
+    background: url("../img/instagram.svg") center/cover no-repeat;
   }
     
   .policy{
     font-size: 14px;
     bottom: 1.1rem;
     right: 3.85rem;
-    left: auto;
   }
 
 }

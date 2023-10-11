@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web page description">
+    <meta name="author" content="Romāns Šardakovs">
+    <title>SparkleHeart</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <link rel="icon" href="assets/img/favicon16X16.svg" sizes="16x16" type="image/png">
+    <link rel="icon" href="assets/img/favicon32X32.svg" sizes="32x32" type="image/png">
+    <link rel="icon" href="assets/img/favicon96X96.svg" sizes="96x96" type="image/png">
 </head>
 <body>
     <main>
 
-        <header>
+        <header class="header">
             <div class="container">
-                <div class="header-top | position-relative display-flex">
-                    <div class="top-union | position-absolute" ></div>
+                <div class="header-top">
+                    <div class="top-union" ></div>
                     <div class="header-logo"></div>
-                    <div class="exit-icon | position-absolute"></div>
-                    <div class="menu-icon | position-absolute"></div>
+                    <div class="exit-icon"></div>
+                    <div class="menu-icon"></div>
                     <ul  class="primary-navbar | text-montserrat-500 text-500">
                         <li><a href="">Ideja</a></li>
                         <li><a href="">Piesaki Sapni</a></li>
@@ -30,8 +35,8 @@
         </header>
     
         <div class="video-img-group">
-            <div class="video-img | position-relative" >
-                <div class="play-icon | position-absolute"></div>
+            <div class="video-img" >
+                <div class="play-icon"></div>
             </div>
         </div>
 
@@ -49,20 +54,19 @@
             </div>
        </section>
        
-
        <section class="images-sect">
-        <div class="container | position-relative">
-            <div class="cover-top | position-absolute"></div>
+        <div class="container">
+            <div class="cover-top"></div>
                 <div class="images">
                     <div class="img-group">
-                        <div class="Brinuma_meita-15"></div>
-                        <div class="Alina_11"></div>
+                        <div class="brinuma-meita-img"></div>
+                        <div class="alina-img"></div>
                     </div>
-                    <div class="Anda2-1"></div>
-                    <div class="Zanda-1"></div>
-                    <div class="Sibilia-4"></div>
+                    <div class="anda-img"></div>
+                    <div class="zanda-img"></div>
+                    <div class="sibilia-img"></div>
                 </div>
-            <div class="cover-bottom | position-absolute"></div>
+            <div class="cover-bottom"></div>
        </section>
     
        <section class="buttons-sect">
@@ -81,76 +85,62 @@
        <section class="form-sect">
         <div class="container">
             <h2 class="form-title | clr-primary text-oswald text-500">SAZINĀTIES AR MUMS</h2>
-                <div class="form-container | text-montserrat-400 text-400">
-                    <form>
-                        <div class="name-emails-group | display-flex">
-                            <input type="text" id="name-surname" placeholder="Vārds, Uzvārds*">
-                            <input type="email" id="email" placeholder="E-pasts*">
+            <div class="form-group | text-montserrat-400 text-400">
+                <form>
+                    <div class="name-email-group">
+                        <input type="text" id="name-surname" placeholder="Vārds, Uzvārds*">
+                        <input type="email" id="email" placeholder="E-pasts*">
+                    </div>
+                    <input type="tel" id="phone" placeholder="Telefons*">
+                    <textarea cols="30" rows="10" id="comment" placeholder="Jautājums, vai komentārs*"></textarea>
+                </form>
+                <p class="mandatory | clr-primary text-montserrat-400 text-400">* obligāti aizpildāmie lauki</p>
+                <form>
+                    <div class="form-checkbox">
+                        <div>
+                            <input id="check-box" type="checkbox">
                         </div>
-                        <input type="tel" id="phone" placeholder="Telefons*">
-                        <textarea cols="30" rows="10" id="comment" placeholder="Jautājums, vai komentārs*"></textarea>
-                    </form>
-                    <p class="mandatory | clr-primary text-montserrat-400 text-400">* obligāti aizpildāmie lauki</p>
-                    <form>
-                        <div class="display-flex">
-                            <div>
-                                <div>
-                                    <input id="check-box" type="checkbox">
-                                </div>
-                            </div>
-                            <div class="terms-container">
-                                <label class="clr-primary text-montserrat-400 text-400" id="terms" for="check-box">Piekrītu, ka mani dati tiks izmantoti likumdošanā noteiktā kārtībā un tiks saglabāti līdz brīdim, kamēr tas būs nepieciešams.</label>
-                            </div>
+                        <div class="terms-container">
+                            <label class="clr-primary text-montserrat-400 text-400" id="terms" for="check-box">Piekrītu, ka mani dati tiks izmantoti likumdošanā noteiktā kārtībā un tiks saglabāti līdz brīdim, kamēr tas būs nepieciešams.</label>
                         </div>
-                    </form>
-                    <button class="submit-btn | button bg-primary text-montserrat-500 text-500">Sūtīt</button>
-                </div>
+                    </div>
+                </form>
+                <button class="submit-btn | button bg-primary text-montserrat-500 text-500">Sūtīt</button>
+            </div>
         </div>
        </section>
     
        <section class="logos-sect">
-            <div class="container | position-relative">
-                <div class="logos-title | position-absolute">
+            <div class="container">
+                <div class="logos-title">
                     <h4 class="clr-primary text-oswald text-500">ATBALSTĪTĀJI</h4>
                 </div>
-                <div class="container-logos | display-flex">
+                <div class="logos-group">
                     <div class="logo-bg"></div>
-                    <div class="logos | position-absolute">
-                        <div class="getlogo | position-absolute"></div>
-                        <div class="sem_logo | position-absolute"></div>
-                        <div class="Citybee | position-absolute"></div>
-                        <div class="logo1 | position-absolute"></div>
+                    <div class="logos">
+                        <div class="teikums-logo"></div>
+                        <div class="sem-logo"></div>
+                        <div class="citybee-logo"></div>
+                        <div class="linearis-logo"></div>
                     </div>
                 </div>
             </div>
        </section>
     
-       <footer>
-            <div class="container | position-relative text-montserrat-500 text-500">
-                <div class="footer-bg | position-relative"></div>
+       <footer class="footer">
+            <div class="container | text-montserrat-500 text-500">
+                <div class="footer-bg"></div>
 
-                <div class="footer-logo | position-absolute"></div>
+                <div class="footer-logo"></div>
 
                 <p class="info-name">Juris Gogulis</p>
-                <div class="info-container | position-absolute">
+                <div class="info-group">
                     <p>juris.gogulis@sparkleheart.org</p>
                     <p>+37126890034</p>
                     <p>Biķernieku iela 24a - 5, LV-1006</p>
                 </div>
 
-                <a href="" class="view-requsites | position-absolute text-montserrat-500">Skatīt rekvizītus</a>
-
-                <div class="icons | position-absolute text-Montserrat-500">
-                    <div class="icons-group | display-flex">
-                        <div class="facebook"></div>
-                        <div class="instagram"></div>
-                    </div>
-                </div>
-
-                <p class="footer-logo-text | position-absolute">© <span id="whitespace">Sparkle Heart</span> 2020. Visas tiesības aizsargātas.</p>
-                <a href="" class="policy | position-absolute">Privātuma politika</a>
-
-                <div class="navbar | position-absolute text-Montserrat-500">
+                <div class="navbar-footer | text-Montserrat-500">
                     <ul>
                         <li><a href="">Ideja</a></li>
                         <li><a href="">Piesaki Sapni</a></li>
@@ -161,12 +151,23 @@
                     </ul>
                 </div>
 
-                <div class="requsites | position-absolute text-Montserrat-500">
-                    <p class="requsites-title">Biedrība SparkleHeart</p>
+                <a href="" class="view-requsites">Skatīt rekvizītus</a>
+                <div class="requsites">
+                    <p>Biedrība SparkleHeart</p>
                     <p>Reģistrācijas nr. 40008293119</p>
                     <p>Banka: SWEDBANK A/S</p>
                     <p>LV52HABA0551047652465</p>
                 </div>
+
+                <div class="icons">
+                    <div class="icons-group">
+                        <div class="facebook"></div>
+                        <div class="instagram"></div>
+                    </div>
+                </div>
+
+                <p class="footer-text">© <span id="whitespace">Sparkle Heart</span> 2020. Visas tiesības aizsargātas.</p>
+                <a href="" class="policy">Privātuma politika</a>
             </div>
         </footer>
        
