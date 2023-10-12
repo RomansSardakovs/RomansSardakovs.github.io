@@ -7,6 +7,9 @@
   --bg-footer-top: #FFCB66;
   --bg-footer-bottom: #2F4858;
   --bg-form: #c4c4c466;
+  --bg-btn-hover: #ffda16;
+  --bg-btn-active: #ff8a00;
+
 
   --ff-montserrat-400: Montserrat-400;
   --ff-montserrat-500: Montserrat-500;
@@ -29,7 +32,8 @@ font-family: Montserrat-400;
 src: url('../font/Montserrat/Montserrat-Regular.ttf') format('truetype');
 }
 
-/* https://piccalil.li/blog/a-modern-css-reset */
+/* CSS Reset
+  https://piccalil.li/blog/a-modern-css-reset */
 *,*::before,*::after {box-sizing: border-box;}
 
 * {
@@ -80,8 +84,6 @@ button {cursor: pointer;}
 
 /* Utility Classes*/
 
-#whitespace{color: white;}
-
 .clr-primary{color: var(--clr-primary);}
 .clr-footer{color: var(--clr-footer);}
 .clr-button{color: var(--clr-button);}
@@ -122,6 +124,14 @@ h3{
 font-style: var(--ff-oswald);
 font-weight: var(--fw-500);
 font-size: 24px;
+}
+
+button:hover{
+  background-color: var(--bg-btn-hover);
+}
+
+button:active{
+  background-color: var(--bg-btn-active);
 }
 
 .header-top,
@@ -186,7 +196,6 @@ font-size: 24px;
   bottom: 0;
 }
 
-.btn-group h3,
 .form-title,
 .form-group {
   margin: 0 auto;
@@ -226,11 +235,6 @@ font-size: 24px;
 .text .container {
   text-align: center;
   margin: 0 auto;
-}
-
-.buttons-sect .container {
-  text-align: center;
-  align-items: center;
 }
 
 .form-group form input,
@@ -375,21 +379,23 @@ font-size: 24px;
   
   .buttons-sect .container{
     margin-bottom: 7.4rem;
-  }
-  
-  .first-group{
-    margin-bottom: 5rem;
-  }
-  
-  .btn-group h3{
-    margin-bottom: 1.9rem;
+  }.buttons-sect .container h3{
     font-size: 18px;
-  }.first-btn-title{
+  }
+  
+  .first-btn-title{
+    text-align: center;
     max-width: 394px;
     min-height: 29px;
-  }.second-btn-title{
+    margin-left: .65rem;
+  }
+  
+  .second-btn-title{
+    text-align: center;
     max-width: 280px;
     min-height: 55px;
+    margin-left: 1.3rem;
+    margin-top: 5rem;
   }
   
   .buttons-sect-btn{
@@ -398,6 +404,16 @@ font-size: 24px;
     min-height: 50px;
   }
   
+  .first-btn {
+    margin-left: 3rem;
+    margin-top: 1.9rem;
+  }
+
+  .second-btn {
+    margin-left: 3rem;
+    margin-top: 1.9rem;
+  }
+
   .form-title{
     min-width: 280px;
     min-height: 35px;
@@ -409,7 +425,8 @@ font-size: 24px;
     max-width: 280px;
   }
   
-  .form-group form input, .form-group form textarea{
+  .form-group form input, 
+  .form-group form textarea{
     min-width: 280px;
     min-height: 35px;
     font-size: 14px;
@@ -592,6 +609,7 @@ font-size: 24px;
     min-width: 768px;
   }
 
+
   .primary-navbar{display: none;}
   .exit-icon{display: none;}
   .menu-icon{
@@ -706,37 +724,57 @@ font-size: 24px;
   }
 
   .buttons-sect .container{
-    align-items: end;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 5rem;
-    margin-bottom: 9.1rem;
-    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto; 
+    gap: 20px; 
+    margin-bottom: 9.15rem;
+  }.buttons-sect .container h3{
+    font-size: 18px;
   }
 
-  .first-group{
-    order: 2;
+  .first-btn-title{
+    text-align: center;
+    max-width: 233px;
+    min-height: 54px;
+    margin-left: 3.85rem;
+    margin-top: 2.5rem;
+    grid-column: 2; 
+    grid-row: 1; 
   }
   
-  .second-group{
-    order: 1;
-  }
-
-  .btn-group h3{
-    margin-bottom: 3rem;
-    font-size: 18px;
-  }.first-btn-title{
+  .second-btn-title{
+    text-align: center;
     max-width: 233px;
-    min-height: 54px;
-  }.second-btn-title{
-    max-width: 233px;
-    min-height: 54px;
+    min-height: 29px;
+    margin-left: 5rem;
+    margin-top: 2.5rem;
+    grid-column: 1;
+    grid-row: 1; 
   }
 
   .buttons-sect-btn{
     font-size: 18px;
     min-width: 233px;
     min-height: 50px;
+  }
+
+  .first-btn {
+    max-width: 233px;
+    min-height: 50px;
+    margin-left: 5rem;
+    margin-top: 1.75rem;
+    grid-column: 1; 
+    grid-row: 2; 
+  }
+
+  .second-btn {
+    max-width: 233px;
+    min-height: 50px;
+    margin-left: 3.85rem;
+    margin-top: 1.75rem;
+    grid-column: 2; 
+    grid-row: 2;
   }
 
   .form-title{
@@ -751,7 +789,8 @@ font-size: 24px;
     margin-bottom: 8rem;
   }
 
-  .form-group form input, .form-group form textarea{
+  .form-group form input, 
+  .form-group form textarea{
     font-size: 18px;
     min-width: 294px;
     min-height: 40px;
@@ -938,6 +977,7 @@ font-size: 24px;
     min-width: 1366px;
   }
 
+
   .view-requsites{display: none;}
   .exit-icon{display: none;}
   .menu-icon{display: none;}
@@ -968,10 +1008,6 @@ font-size: 24px;
     background: url("../img/header-top.svg") center/cover no-repeat;
   }
     
-  .header-top{
-    top: 0;
-  }
-  
   .header-logo{
     min-width: 159px;
     min-height: 95px;
@@ -1065,41 +1101,51 @@ font-size: 24px;
   }
     
   .buttons-sect .container{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 9.45rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto; 
+    gap: 20px; 
+    margin-bottom: 9.25rem;
   }
 
-  .first-group{
-    order: 1;
-  }
-
-  .second-group{
-    order: 2;
-  }
-    
-  .btn-group{
+  .first-btn-title{
     text-align: center;
-    margin-left: 4.25rem;
-    margin-right: 1rem;
+    max-width: 394px;
+    min-height: 29px;
+    margin-left: 13.75rem;
+    grid-column: 1; 
+    grid-row: 1; 
   }
   
-  .btn-group h3{
-    margin-bottom: 2.6rem;
-  }.first-btn-title{
-    min-width: 394px;
+  .second-btn-title{
+    text-align: center;
+    max-width: 500px;
     min-height: 29px;
-  }.second-btn-title{
-    min-width: 500px;
-    min-height: 29px;
+    margin-left: .25rem;
+    grid-column: 2;
+    grid-row: 1; 
   }
-    
+
   .buttons-sect-btn{
     font-size: 18px;
-    min-width: 233px;
+    max-width: 233px;
     min-height: 50px;
   }
     
+  .first-btn {
+    margin-left: 18.75rem;
+    margin-top: 1.5rem;
+    grid-column: 1; 
+    grid-row: 2; 
+  }
+
+  .second-btn {
+    margin-left: 8.75rem;
+    margin-top: 1.5rem;
+    grid-column: 2; 
+    grid-row: 2;
+  }
+
   .form-title{
     font-size: 30px; 
     margin-bottom: 3.5rem;
@@ -1114,12 +1160,13 @@ font-size: 24px;
     display: flex;
   }
     
-  .form-sect form input, .form-sect form textarea{
+  .form-group form input, 
+  .form-group form textarea{
     font-size: 18px; 
     min-width: 296px;
     min-height: 43px;
     margin-bottom: 1rem;
-    padding-top: .3rem;
+    padding-top: .5rem;
     padding-left: .75rem;
   }
     
@@ -1135,7 +1182,7 @@ font-size: 24px;
     min-width: 612px;
     max-height: 232px;
     margin-bottom: .9rem;
-    padding-top: .6rem;
+    padding-top: .65rem;
   }
 
   .form-group .mandatory {
