@@ -106,6 +106,24 @@ color: var(--clr-button);
 
 /* General Styles */
 
+h1{
+font-style: var(--ff-oswald);
+font-weight: var(--fw-500);
+font-size: 48px;
+}
+
+h2{
+font-style: var(--ff-oswald);
+font-weight: var(--fw-500);
+font-size: 30px;
+}
+
+h3{
+font-style: var(--ff-oswald);
+font-weight: var(--fw-500);
+font-size: 24px;
+}
+
 .header-top,
 .name-email-group,
 .form-checkbox,
@@ -115,7 +133,7 @@ color: var(--clr-button);
   display: flex;
 }
 
-.top-union,
+.header-cover,
 .exit-icon,
 .menu-icon,
 .play-icon,
@@ -260,7 +278,7 @@ color: var(--clr-button);
   }
 
 
-  .top-union{
+  .header-cover{
     min-width: 320px;
     min-height: 59px;
     background: url("../img/mobile/header-top.svg") center/cover no-repeat;
@@ -364,8 +382,8 @@ color: var(--clr-button);
   }
   
   .btn-group h3{
-    font-size: 18px;
     margin-bottom: 1.9rem;
+    font-size: 18px;
   }.first-btn-title{
     max-width: 394px;
     min-height: 29px;
@@ -522,6 +540,7 @@ color: var(--clr-button);
   
   .info-name{
     font-size: 18px;
+    color: white;
     left: 20px;
     top: 169px;
   }
@@ -586,7 +605,7 @@ color: var(--clr-button);
   }
 
 
-  .top-union{
+  .header-cover{
     min-width: 768px;
     min-height: 96px;
     background: url("../img/tablet/header-top.svg") center/cover no-repeat;
@@ -691,7 +710,7 @@ color: var(--clr-button);
     display: flex;
     justify-content: space-between;
     margin: 0 5rem;
-    margin-bottom: 9rem;
+    margin-bottom: 9.1rem;
     margin-top: 10rem;
   }
 
@@ -704,8 +723,8 @@ color: var(--clr-button);
   }
 
   .btn-group h3{
-    font-size: 18px;
     margin-bottom: 3rem;
+    font-size: 18px;
   }.first-btn-title{
     max-width: 233px;
     min-height: 54px;
@@ -757,15 +776,15 @@ color: var(--clr-button);
   .form-group #phone{
     min-width: 608px;
     margin-bottom: .9rem;
-    padding-top: .2rem;
-    padding-left: .7rem;
+    padding-top: .15rem;
+    padding-left: .75rem;
   }
   
   .form-group #comment{
     min-width: 608px;
     max-height: 230px;
-    margin-bottom: .75rem;
-    padding-top: .7rem;
+    margin-bottom: .65rem;
+    padding-top: .6rem;
     padding-left: .8rem;
   }
     
@@ -869,6 +888,7 @@ color: var(--clr-button);
 
   .info-name{
     font-size: 24px;
+    color: white;
     left: 80px;
     bottom: 100px;
   }
@@ -941,7 +961,7 @@ color: var(--clr-button);
   }
 
 
-  .top-union {
+  .header-cover {
     min-width: 85.375rem;
     min-height: 7.5rem;
     top: 5px;
@@ -1065,7 +1085,6 @@ color: var(--clr-button);
   }
   
   .btn-group h3{
-    font-size: 24px;
     margin-bottom: 2.6rem;
   }.first-btn-title{
     min-width: 394px;
@@ -1237,17 +1256,20 @@ color: var(--clr-button);
     font-size: 18px;
     top: 4.25rem;
     left: 40.15rem;
-  }.requsites p:nth-child(1){
-    font-size: 24px;
-    padding-bottom: 1.15rem;
   }.requsites p:nth-child(2){
     padding-bottom: .85rem;
   }.requsites p:nth-child(3){
     padding-bottom: .5rem;
   }
 
+  .requsites-name{
+    color: white;
+    padding-bottom: 1.15rem;
+  }
+
   .info-name{
     font-size: 24px;
+    color: white;
     top: 4.4rem;
     right: 62.5px;
   }
