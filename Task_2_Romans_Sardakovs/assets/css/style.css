@@ -48,7 +48,6 @@ html:focus-within {scroll-behavior: smooth;}
 html,body {height: 100%;}
 
 body {
-margin: 0 auto;   
 text-rendering: optimizeSpeed;
 font-style: normal;
 line-height: normal;
@@ -270,11 +269,12 @@ button:active{
 @media only screen and (max-width: 320px) {
   
   body{
-    width: 320px;  
     height: 2970px;
   }
   main{
-    min-width: 320px;  
+    width: 320px;  
+    height: 2970px;
+    margin: 0 auto;
   }
   
 
@@ -609,12 +609,13 @@ button:active{
 
 @media only screen and (min-width: 321px) and (max-width: 768px) {
   
-  body {
-    width: 768px;
+  body{
     height: 3021px;
   }
-  main{
-    min-width: 768px;
+  main {
+    width: 768px;
+    height: 3021px;
+    margin: 0 auto;
   }
 
 
@@ -971,15 +972,16 @@ button:active{
 
 @media only screen and (min-width: 769px) {
 
-  body {
-    width: 1366px;  
+  body{
     height: 3651px;
   }
-  main{
-    min-width: 1366px;
+  main {
+    width: 1366px;
+    height: 3651px;
+    margin: 0 auto;   
   }
-
-
+  
+  
   .view-requsites{display: none;}
   .exit-icon{display: none;}
   .menu-icon{display: none;}
@@ -1056,7 +1058,7 @@ button:active{
   .cover-bottom {
     min-width: 1366px;
     min-height: 55px;
-    bottom: -.0.9375rem;
+    bottom: -.9375rem;
     background: url("../img/images-bottom.svg") center/cover no-repeat;
   }
 
